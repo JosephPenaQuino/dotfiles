@@ -7,6 +7,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'ycm-core/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
+Plugin 'vimwiki/vimwiki'
+Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-airline/vim-airline'
 call vundle#end()            
 filetype plugin indent on    

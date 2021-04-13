@@ -45,6 +45,8 @@ ZSH_THEME="agnoster"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
+# Caution: this setting can cause issues with multiline prompts (zsh 5.7.1 and newer seem to work)
+# See https://github.com/ohmyzsh/ohmyzsh/issues/5765
 # COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
@@ -103,6 +105,7 @@ alias lss="ls -lhtr"
 export PATH="$PATH:/home/joseph/.local/bin"
 export PATH="$PATH:/home/joseph/Programs/gcc-arm-none-eabi-9-2020-q2-update/bin"
 export PATH="$HOME/STM32MPU_workspace/STM32MPU-Tools/STM32CubeProgrammer-x.y.z/bin:$PATH"
+export "PATH=$HOME/bin:$PATH"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -124,4 +127,6 @@ alias vg_mem='valgrind --leak-check=full -v --track-origins=yes'
 
 # Set size
 tabs 4
+
+# Git 
 alias config='/usr/bin/git --git-dir=/home/joseph/.cfg/ --work-tree=/home/joseph'
