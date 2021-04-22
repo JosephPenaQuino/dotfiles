@@ -6,7 +6,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'ycm-core/YouCompleteMe'
-Plugin 'rdnetto/YCM-Generator'
 Plugin 'vimwiki/vimwiki'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-airline/vim-airline'
@@ -46,14 +45,10 @@ syntax on
 " Mapping to close the completion menu (default <C-y>)
 let g:ycm_key_list_stop_completion = ['<C-x>']
 
-" Set filetypes where YCM will be turned on
-let g:ycm_filetype_whitelist = { 'cpp':1, 'h':2, 'hpp':3, 'c':4, 'cxx':5 }
-
 " Close preview window after completing the insertion
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 
-let g:ycm_confirm_extra_conf = 0                 " Don't confirm python conf
 let g:ycm_always_populate_location_list = 1      " Always populae diagnostics list
 let g:ycm_enable_diagnostic_signs = 1            " Enable line highligting diagnostics
 let g:ycm_open_loclist_on_ycm_diags = 1          " Open location list to view diagnostics
