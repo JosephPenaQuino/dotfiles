@@ -104,6 +104,7 @@ alias lss="ls -lhtr"
 # Created by `userpath` on 2021-01-25 16:13:40
 export PATH="$PATH:/home/joseph/.local/bin"
 export PATH="$PATH:/home/joseph/Programs/gcc-arm-none-eabi-9-2020-q2-update/bin"
+export PATH="$PATH:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin"
 export PATH="$HOME/STM32MPU_workspace/STM32MPU-Tools/STM32CubeProgrammer-x.y.z/bin:$PATH"
 export "PATH=$HOME/bin:$PATH"
 
@@ -130,3 +131,6 @@ tabs 4
 
 # Git 
 alias config='/usr/bin/git --git-dir=/home/joseph/.cfg/ --work-tree=/home/joseph'
+
+# ESP
+alias get_idf='. $HOME/esp/esp-idf/export.sh'
