@@ -130,3 +130,7 @@ tabs 4
 
 # Git 
 alias config='/usr/bin/git --git-dir=/home/joseph/.cfg/ --work-tree=/home/joseph'
+
+# ESP
+alias get_idf='. $HOME/esp/esp-idf/export.sh'
+IDF_PATH='/home/joseph/Esp32/esp-idf'
