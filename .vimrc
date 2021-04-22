@@ -11,7 +11,6 @@ Plugin 'vimwiki/vimwiki'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-airline/vim-airline'
 call vundle#end()            
-filetype plugin indent on    
 
 " DiffSaved
 function! s:DiffWithSaved()
