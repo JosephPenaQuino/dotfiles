@@ -9,6 +9,7 @@ Plugin 'ycm-core/YouCompleteMe'
 Plugin 'vimwiki/vimwiki'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-airline/vim-airline'
+Plugin 'rdnetto/YCM-Generator'
 call vundle#end()            
 
 " DiffSaved
@@ -31,6 +32,7 @@ set list listchars=tab:\|\-
 
 " Share vim clipboard
 vmap <leader>y :w! /tmp/vitmp<CR>
+vmap <leader>x :w! /tmp/vitmp<CR> gv x
 nmap <leader>p :r! cat /tmp/vitmp<CR>
 map <F2> :echo 'Current time is ' . strftime('%c')<CR>
 
@@ -61,6 +63,8 @@ let g:ycm_error_symbol = '>>'                    " The error symbol in Vim gutte
 let g:ycm_enable_diagnostic_signs = 1            " Display icons in Vim's gutter, error, warnings
 let g:ycm_enable_diagnostic_highlighting = 1     " Highlight regions of diagnostic text
 let g:ycm_echo_current_diagnostic = 1            " Echo line's diagnostic that cursor is on
+
+let g:ycm_confirm_extra_conf = 0
 "============================================================
 
 " Highlight all instances of word under cursor, when idle.
