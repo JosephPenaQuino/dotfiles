@@ -11,6 +11,9 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-airline/vim-airline'
 Plugin 'rdnetto/YCM-Generator'
 Plugin 'dracula/vim', { 'name': 'dracula' }
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-commentary'
+Plugin 'christoomey/vim-system-copy'
 call vundle#end()            
 
 " DiffSaved
@@ -65,8 +68,8 @@ let g:ycm_enable_diagnostic_signs = 1            " Display icons in Vim's gutter
 let g:ycm_enable_diagnostic_highlighting = 1     " Highlight regions of diagnostic text
 let g:ycm_echo_current_diagnostic = 1            " Echo line's diagnostic that cursor is on
 
-let g:ycm_confirm_extra_conf = 0
 let g:ycm_collect_identifiers_from_tags_files = 1
+let g:ycm_confirm_extra_conf = 0                 " Don't ask to confirm .ycm_extra_conf
 "============================================================
 
 " Highlight all instances of word under cursor, when idle.
