@@ -134,3 +134,4 @@ alias config='/usr/bin/git --git-dir=/home/joseph/.cfg/ --work-tree=/home/joseph
 
 # ESP
 alias get_idf='. $HOME/esp/esp-idf/export.sh'
+IDF_PATH="$HOME/esp/esp-idf"
