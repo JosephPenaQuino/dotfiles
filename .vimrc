@@ -10,6 +10,7 @@ Plugin 'vimwiki/vimwiki'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-airline/vim-airline'
 Plugin 'rdnetto/YCM-Generator'
+Plugin 'dracula/vim', { 'name': 'dracula' }
 call vundle#end()            
 
 " DiffSaved
@@ -65,6 +66,7 @@ let g:ycm_enable_diagnostic_highlighting = 1     " Highlight regions of diagnost
 let g:ycm_echo_current_diagnostic = 1            " Echo line's diagnostic that cursor is on
 
 let g:ycm_confirm_extra_conf = 0
+let g:ycm_collect_identifiers_from_tags_files = 1
 "============================================================
 
 " Highlight all instances of word under cursor, when idle.
@@ -95,6 +97,14 @@ endfunction
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_statusline_ontop = 1
 
+" Show the name of the function
+fun! ShowFuncName()
+  echohl ModeMsg
+  echo getline(search("^[^ \t#/]\\{2}.*[^:]\s*$", 'bWn'))
+  echohl None
+endfun
+map F :call ShowFuncName() <CR>
+
 set tabstop=4
 set autoindent
 set shiftwidth=4
@@ -103,3 +113,9 @@ set noexpandtab
 set number
 set relativenumber
 set statusline +=%F
+
+" Colortheme
+colorscheme dracula
+
+" Color typedefs, unions and structs
+match Type /\w*_t/
