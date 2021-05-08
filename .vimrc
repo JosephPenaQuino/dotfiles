@@ -14,6 +14,7 @@ Plugin 'dracula/vim', { 'name': 'dracula' }
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'christoomey/vim-system-copy'
+Plugin 'SirVer/ultisnips'
 call vundle#end()            
 
 " DiffSaved
@@ -70,6 +71,7 @@ let g:ycm_echo_current_diagnostic = 1            " Echo line's diagnostic that c
 
 let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_confirm_extra_conf = 0                 " Don't ask to confirm .ycm_extra_conf
+let g:ycm_use_ultisnips_completer = 1
 "============================================================
 
 " Highlight all instances of word under cursor, when idle.
@@ -121,4 +123,8 @@ set statusline +=%F
 colorscheme dracula
 
 " Color typedefs, unions and structs
-match Type /\w*_t/
+match Type "\h\w*_t\w\@!"
+" Trigger configuration. Do not use <tab> if you use YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<return>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
