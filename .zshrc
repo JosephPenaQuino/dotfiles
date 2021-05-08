@@ -137,5 +137,6 @@ alias get_idf='. $HOME/esp/esp-idf/export.sh'
 IDF_PATH="$HOME/esp/esp-idf"
 
 # Copy current path to clipboard
-alias cpwd='pwd | xclip -selection clipboard'
-source ~/.omni_env
+alias cpwd='pwd | xsel -i -b'
+source ~/.omni_env 2> /dev/null
+source ~/.personal_env 2> /dev/null
