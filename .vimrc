@@ -4,6 +4,8 @@ filetype off                  " required
 " Vundle Plugins
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+Plugin 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+Plugin 'rhysd/vim-clang-format'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'ycm-core/YouCompleteMe'
 Plugin 'vimwiki/vimwiki'
@@ -125,6 +127,10 @@ colorscheme dracula
 " Color typedefs, unions and structs
 match Type "\h\w*_t\w\@!"
 " Trigger configuration. Do not use <tab> if you use YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<return>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
+let g:UltiSnipsExpandTrigger="<C-j>"
+let g:UltiSnipsJumpForwardTrigger="<C-n>"
+
+" clang 
+let g:clang_detect_style_file = 1
+let g:clang_format#auto_format = 1
+

@@ -1,0 +1,12 @@
+BasedOnStyle: GNU
+Language: Cpp
+
+AlignConsecutiveMacros: true
+IndentWidth: 4
+UseTab: Always
+TabWidth: 4
+IndentCaseLabels: true
+
+BreakBeforeBraces: Custom
+BraceWrapping:
+	IndentBraces: false
