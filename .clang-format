@@ -10,3 +10,5 @@ IndentCaseLabels: true
 BreakBeforeBraces: Custom
 BraceWrapping:
 	IndentBraces: false
+
+SpaceBeforeParens: ControlStatements
