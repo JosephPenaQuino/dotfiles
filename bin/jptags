@@ -1,0 +1,12 @@
+#!/usr/bin/bash
+
+find . -name "*.c" | grep -v build > /tmp/joseph_tags
+
+args=("$@")
+for ((i=0; i < $#; i++))
+{
+	find ${args[$i]} -name "*.c" | grep -v build >> /tmp/joseph_tags
+}
+
+
+ctags -L /tmp/joseph_tags
