@@ -31,7 +31,6 @@ com! DiffSaved call s:DiffWithSaved()
 
 " Ctags
 set tags=./tags;,tags;
-set tags+=/home/joseph/projects/tools/contiki-ng-43/os/tags
 
 " Show tabs
 set list
