@@ -140,3 +140,7 @@ IDF_PATH="$HOME/esp/esp-idf"
 alias cpwd='pwd | xsel -i -b'
 source ~/.omni_env 2> /dev/null
 source ~/.personal_env 2> /dev/null
+
+# Install Ruby Gems to ~/gems' 
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
