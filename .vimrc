@@ -17,6 +17,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'christoomey/vim-system-copy'
 Plugin 'SirVer/ultisnips'
+Plugin 'wakatime/vim-wakatime'
 call vundle#end()            
 
 " DiffSaved
@@ -31,7 +32,6 @@ com! DiffSaved call s:DiffWithSaved()
 
 " Ctags
 set tags=./tags;,tags;
-set tags+=/home/joseph/projects/tools/contiki-ng-43/os/tags
 
 " Show tabs
 set list

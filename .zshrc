@@ -144,3 +144,5 @@ source ~/.personal_env 2> /dev/null
 # Install Ruby Gems to ~/gems' 
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
+# Vim 
+alias genEspIdfYcm='~/.vim/bundle/YCM-Generator/config_gen.py -c $(which xtensa-esp32-elf-gcc) --verbose --preserve-environment .'
