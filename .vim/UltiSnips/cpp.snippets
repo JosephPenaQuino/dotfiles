@@ -4,3 +4,91 @@ snippet ifndef
 $0
 #endif /* _$1_H_ */
 endsnippet
+snippet fori "for using i index"
+for (i=0; i<${1:range}; ++i) {
+	${2:Content}
+}
+endsnippet
+
+snippet main "main()"
+int
+main (int argc, char *argv[]) {
+	${VISUAL}${0}
+	return 0;
+}
+endsnippet
+
+snippet Inc "#include <...>"
+#include <${1:stdio}.h>
+endsnippet
+
+snippet inc "#include"
+#include "${1}.h"
+endsnippet
+
+snippet Def "#ifndef ... #define ... #endif"
+#ifndef $1
+#define ${1:SYMBOL} ${2:value}
+#endif
+endsnippet
+
+snippet def "#define"
+#define
+endsnippet
+
+snippet ifdef "#ifdef"
+#ifdef ${1}
+${VISUAL}${0}
+#endif /* $1 */
+endsnippet
+
+snippet #if "#if"
+#if ${1}
+${VISUAL}${0}
+#endif /* $1 */
+endsnippet
+
+snippet ifc "If Condition"
+if (${1}) {
+	${VISUAL}${0}
+}
+endsnippet
+snippet el "Else"
+else {
+	${VISUAL}${0}
+}
+endsnippet
+snippet ter "Ternary conditional"
+${1} ? ${2:a} : ${3:b}
+endsnippet
+snippet do "Do While Loop"
+do {
+	${VISUAL}${0}
+} while (${1});
+endsnippet
+snippet wh "While Loop"
+while (${1}) {
+	${VISUAL}${0}
+}
+endsnippet
+
+snippet td "Typedef"
+typedef ${1:int} ${2:MyCustomType};
+endsnippet
+
+snippet st "Struct"
+typedef struct {
+	${0:/* data */}
+}; ${1} /* struct $1 */
+endsnippet
+
+snippet en "Enum"
+typedef enum {
+	${0:/* data */}
+} ${1}; /* enum $1 */
+endsnippet
+
+snippet pr "printf"
+printf("${1:%s}\n"${1/([^%]|%%)*(%.)?.*/(?2:, :\);)/}$2${1/([^%]|%%)*(%.)?.*/(?2:\);)/}
+endsnippet
+
