@@ -18,6 +18,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'christoomey/vim-system-copy'
 Plugin 'SirVer/ultisnips'
 Plugin 'wakatime/vim-wakatime'
+Plugin 'vim-scripts/argtextobj.vim'
 call vundle#end()            
 
 " DiffSaved
