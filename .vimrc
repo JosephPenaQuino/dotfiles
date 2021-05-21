@@ -79,8 +79,8 @@ let g:ycm_use_ultisnips_completer = 1
 
 " Highlight all instances of word under cursor, when idle.
 " Useful when studying strange source code.
-" Type z/ to toggle highlighting on/off.
-nnoremap z/ :if AutoHighlightToggle()<Bar>set hls<Bar>endif<CR>
+" Type <C-K> to toggle highlighting on/off.
+nnoremap <C-K> :if AutoHighlightToggle()<Bar>set hls<Bar>endif<CR>
 function! AutoHighlightToggle()
    let @/ = ''
    if exists('#auto_highlight')
@@ -111,7 +111,7 @@ fun! ShowFuncName()
   echo getline(search("^[^ \t#/]\\{2}.*[^:]\s*$", 'bWn'))
   echohl None
 endfun
-map F :call ShowFuncName() <CR>
+map <C-_> :call ShowFuncName() <CR>
 
 set tabstop=4
 set autoindent
