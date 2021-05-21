@@ -1,0 +1,29 @@
+#!/usr/bin/python3
+
+import argparse
+from importlib.util import spec_from_loader, module_from_spec
+from importlib.machinery import SourceFileLoader 
+
+spec = spec_from_loader("plotNpy", SourceFileLoader("plotNpy", "/home/joseph/bin/plotNpy"))
+plotNpy = module_from_spec(spec)
+spec.loader.exec_module(plotNpy)
+
+def show_multiple(initial, qnt, limits, stats, offset):
+	files  = [] 
+	for i in range(qnt):
+		files.append("im_{:04d}.npy".format(initial+i))
+	plotNpy.plot(files, limits, stats, offset)
+
+if __name__ == "__main__":
+	parser = argparse.ArgumentParser()
+	parser.add_argument("initial", 
+						help="The number of the first image to be read. eg: 10 from im_0010.npy",
+						type=int)
+	parser.add_argument("quantity",
+						help="The quantity of images that are to be read. eg: 10 to read from im_0010.npy until im_0019.npy",
+						type=int)
+	parser.add_argument("-l", "--limits", help="Prints or not the max and min values of the image", action="store_true")
+	parser.add_argument("-s", "--stats", help="Prints or not the median and mean values of the image", action="store_true")
+	parser.add_argument("-o", "--offset", help="Prints or not the real index", default=0, type=int)
+	args = parser.parse_args()
+	show_multiple(initial=args.initial, qnt=args.quantity, limits=args.limits, stats=args.stats, offset=args.offset)
