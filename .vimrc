@@ -81,7 +81,7 @@ syntax on
 
 " Highlight all instances of word under cursor, when idle.
 " Useful when studying strange source code.
-" Type z/ to toggle highlighting on/off.
+" Type <C-K> to toggle highlighting on/off.
 nnoremap <C-K> :if AutoHighlightToggle()<Bar>set hls<Bar>endif<CR>
 function! AutoHighlightToggle()
    let @/ = ''
