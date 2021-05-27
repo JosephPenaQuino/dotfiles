@@ -18,12 +18,14 @@ Plugin 'tpope/vim-commentary'
 Plugin 'christoomey/vim-system-copy'
 Plugin 'wakatime/vim-wakatime'
 Plugin 'vim-scripts/argtextobj.vim'
-Plugin 'xuhdev/vim-latex-live-preview'
+" Plugin 'xuhdev/vim-latex-live-preview'
 Plugin 'neoclide/coc.nvim', {'for':['zig','cmake','rust',
       \'java','json', 'haskell', 'ts','sh', 'cs',
       \'yaml', 'c', 'cpp', 'd', 'go',
       \'python', 'dart', 'javascript', 'vim'], 'branch': 'release'}
 Plugin 'jackguo380/vim-lsp-cxx-highlight'
+Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plugin 'junegunn/fzf.vim'
 call vundle#end()            
 
 " DiffSaved
@@ -275,3 +277,5 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
+" ag
+let g:ackprg = 'ag --nogroup --nocolor --column'
