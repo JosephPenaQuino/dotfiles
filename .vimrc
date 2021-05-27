@@ -24,6 +24,8 @@ Plugin 'neoclide/coc.nvim', {'for':['zig','cmake','rust',
       \'yaml', 'c', 'cpp', 'd', 'go',
       \'python', 'dart', 'javascript', 'vim'], 'branch': 'release'}
 Plugin 'jackguo380/vim-lsp-cxx-highlight'
+Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plugin 'junegunn/fzf.vim'
 call vundle#end()            
 
 " DiffSaved
