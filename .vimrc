@@ -279,3 +279,6 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 " ag
 let g:ackprg = 'ag --nogroup --nocolor --column'
+
+" Map Buffers
+nmap <C-p> :Buffers<CR> 
