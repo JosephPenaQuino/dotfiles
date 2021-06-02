@@ -7,18 +7,15 @@ call vundle#begin()
 Plugin 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 Plugin 'rhysd/vim-clang-format'
 Plugin 'VundleVim/Vundle.vim'
-" Plugin 'ycm-core/YouCompleteMe'
 Plugin 'vimwiki/vimwiki'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-airline/vim-airline'
-" Plugin 'rdnetto/YCM-Generator'
 Plugin 'dracula/vim', { 'name': 'dracula' }
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'christoomey/vim-system-copy'
 Plugin 'wakatime/vim-wakatime'
 Plugin 'vim-scripts/argtextobj.vim'
-" Plugin 'xuhdev/vim-latex-live-preview'
 Plugin 'neoclide/coc.nvim', {'for':['zig','cmake','rust',
       \'java','json', 'haskell', 'ts','sh', 'cs',
       \'yaml', 'c', 'cpp', 'd', 'go',
