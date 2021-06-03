@@ -1,0 +1,35 @@
+# if the same trigger is assigned to multiple actions, all of them are executed
+# in the order they were defined in.
+
+shell:
+    program: /bin/zsh
+    args:
+        - -l
+        - -c
+        - "tmux attach || tmux"
+import:
+  - /home/joseph/.config/themes/alacritty-master/dracula.yml
+
+key_bindings:
+    - { key: Return,   mods: Control|Shift,          action: SpawnNewInstance }  # New alacritty window
+    - { key: W,        mods: Control|Shift,          action: Quit             }  # Quit
+    - { key: T,        mods: Control|Shift,          chars: "\x02\x76"        }  # New pane
+    - { key: W,        mods: Control,                chars: "\x02\x78"        }  # Quit current pane
+    - { key: N,        mods: Control|Shift,          chars: "\x02\x63"        }  # New tmux window
+    - { key: K,        mods: Control,                chars: "\x02\x6B"        }  # Move to next pane
+    - { key: J,        mods: Control,                chars: "\x02\x6A"        }  # Move to prev pane
+    - { key: J,        mods: Control|Shift,          chars: "\x02\x74"        }  # Show time in current pane
+    - { key: Tab,      mods: Control,                chars: "\x02\x6e"        }
+    - { key: Tab,      mods: Control|Shift,          chars: "\x02\x70"        }
+    #- { key: Paste,                                action: Paste          }
+    #- { key: L,         mods: Control,             action: ClearLogNotice }
+    #- { key: L,         mods: Control, mode: ~Vi,  chars: "\x0c"          }
+    #- { key: PageUp,    mods: Shift,   mode: ~Alt, action: ScrollPageUp,  }
+    #- { key: PageDown,  mods: Shift,   mode: ~Alt, action: ScrollPageDown }
+    #- { key: Home,      mods: Shift,   mode: ~Alt, action: ScrollToTop,   }
+    #- { key: End,       mods: Shift,   mode: ~Alt, action: ScrollToBottom }
+
+    # Vi Mode
+    - { key: P,        mode: Vi, action: Paste                   }
+    # - { key: U,        mode: Vi, action: Undo                    }
+    #- { key: Space,  mods: Shift|Control, mode: Vi, action: ScrollToBottom          }
