@@ -12,9 +12,8 @@ import:
 
 key_bindings:
     - { key: Return,   mods: Control|Shift,          action: SpawnNewInstance }  # New alacritty window
-    - { key: W,        mods: Control|Shift,          action: Quit             }  # Quit
     - { key: T,        mods: Control|Shift,          chars: "\x02\x76"        }  # New pane
-    - { key: W,        mods: Control,                chars: "\x02\x78"        }  # Quit current pane
+    - { key: W,        mods: Control|Shift,                chars: "\x02\x78"        }  # Quit current pane
     - { key: N,        mods: Control|Shift,          chars: "\x02\x63"        }  # New tmux window
     - { key: K,        mods: Control,                chars: "\x02\x6B"        }  # Move to next pane
     - { key: J,        mods: Control,                chars: "\x02\x6A"        }  # Move to prev pane
