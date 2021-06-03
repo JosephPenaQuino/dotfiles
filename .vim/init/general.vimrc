@@ -4,6 +4,9 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 set showmode
 syntax on
+set incsearch
+set colorcolumn=80
+highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 " Ctags
 set tags=./tags;,tags;
@@ -14,6 +17,12 @@ set autoindent
 set shiftwidth=4
 set softtabstop=4
 set noexpandtab
+
+" undo files
+set noswapfile
+set nobackup
+set undodir=~/.vim/undodir
+set undofile
 
 " Numbers
 set number
