@@ -175,5 +175,11 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
+" Coc Shortcuts
+nmap <leader>B :Buffers<cr>
+nmap <leader>G :GFiles<cr>
+nmap <leader>F :Files<cr>
+
+
 " ag
 let g:ackprg = 'ag --nogroup --nocolor --column'
