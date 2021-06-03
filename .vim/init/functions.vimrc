@@ -14,7 +14,7 @@ com! DiffSaved call s:DiffWithSaved()
 " Highlight all instances of word under cursor, when idle.
 " Useful when studying strange source code.
 " Type <C-K> to toggle highlighting on/off.
-nnoremap <C-K> :if AutoHighlightToggle()<Bar>set hls<Bar>endif<CR>
+nnoremap <leader>k :if AutoHighlightToggle()<Bar>set hls<Bar>endif<CR>
 function! AutoHighlightToggle()
    let @/ = ''
    if exists('#auto_highlight')
