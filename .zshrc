@@ -149,3 +149,5 @@ alias genEspIdfYcm='~/.vim/bundle/YCM-Generator/config_gen.py -c $(which xtensa-
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPS="--extended"
+
+fpath+=${ZDOTDIR:-~}/.zsh_functions
