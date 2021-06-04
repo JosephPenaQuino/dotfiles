@@ -32,4 +32,4 @@ key_bindings:
     - { key: P,        mode: Vi, action: Paste                   }
     # - { key: U,        mode: Vi, action: Undo                    }
     #- { key: Space,  mods: Shift|Control, mode: Vi, action: ScrollToBottom          }
-background_opacity: .65
+background_opacity: .90
