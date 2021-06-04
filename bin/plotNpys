@@ -2,21 +2,22 @@
 
 import argparse
 from importlib.util import spec_from_loader, module_from_spec
-from importlib.machinery import SourceFileLoader 
+from importlib.machinery import SourceFileLoader
+
 
 spec = spec_from_loader("plotNpy", SourceFileLoader("plotNpy", "/home/joseph/bin/plotNpy"))
 plotNpy = module_from_spec(spec)
 spec.loader.exec_module(plotNpy)
 
 def show_multiple(initial, qnt, limits, stats, offset):
-	files  = [] 
+	files  = []
 	for i in range(qnt):
 		files.append("im_{:04d}.npy".format(initial+i))
 	plotNpy.plot(files, limits, stats, offset)
 
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser()
-	parser.add_argument("initial", 
+	parser.add_argument("initial",
 						help="The number of the first image to be read. eg: 10 from im_0010.npy",
 						type=int)
 	parser.add_argument("quantity",

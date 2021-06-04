@@ -6,6 +6,7 @@ set showmode
 syntax on
 set incsearch
 set colorcolumn=80
+set tw=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 " Ctags
@@ -35,3 +36,4 @@ colorscheme dracula
 
 " Color typedefs, unions and structs
 match Type "\h\w*_t\w\@!"
+set wrap linebreak

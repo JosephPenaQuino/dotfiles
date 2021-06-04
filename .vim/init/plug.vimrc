@@ -4,7 +4,7 @@
 " Vundle Plugins
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+" Plugin 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 Plugin 'rhysd/vim-clang-format'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vimwiki/vimwiki'
