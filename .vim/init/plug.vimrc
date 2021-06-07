@@ -23,4 +23,5 @@ Plugin 'neoclide/coc.nvim', {'for':['zig','cmake','rust',
 Plugin 'jackguo380/vim-lsp-cxx-highlight'
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
+Plugin 'tpope/vim-fugitive'
 call vundle#end()            
