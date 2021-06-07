@@ -180,6 +180,10 @@ nmap <leader>B :Buffers<cr>
 nmap <leader>G :GFiles<cr>
 nmap <leader>F :Files<cr>
 
-
 " ag
 let g:ackprg = 'ag --nogroup --nocolor --column'
+
+" vim fugitive
+nmap <leader>gh :diffget //3<CR>
+nmap <leader>gf :diffget //2<CR>
+nmap <leader>gs :G<CR>
