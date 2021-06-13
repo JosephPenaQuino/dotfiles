@@ -1,15 +1,24 @@
+---
 BasedOnStyle: GNU
+IndentWidth: 4
+TabWidth: 4
+UseTab: Always
+---
+
+---
 Language: Cpp
 
 AlignConsecutiveMacros: true
-IndentWidth: 4
-UseTab: Always
-TabWidth: 4
 IndentCaseLabels: true
 AlignTrailingComments: true
-
 BreakBeforeBraces: Custom
 BraceWrapping:
 	IndentBraces: false
-
 SpaceBeforeParens: ControlStatements
+
+AllowAllArgumentsOnNextLine : false
+AllowShortBlocksOnASingleLine: Never
+
+AlignAfterOpenBracket: Align
+BinPackArguments: false
+---
