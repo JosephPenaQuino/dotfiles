@@ -106,6 +106,7 @@ export PATH="$PATH:/home/joseph/.local/bin"
 export PATH="$PATH:/home/joseph/Programs/gcc-arm-none-eabi-9-2020-q2-update/bin"
 export PATH="$PATH:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin"
 export PATH="$HOME/STM32MPU_workspace/STM32MPU-Tools/STM32CubeProgrammer-x.y.z/bin:$PATH"
+export PATH="$PATH:$HOME/Programs/gcc-arm-10.2-2020.11-x86_64-arm-none-linux-gnueabihf/bin"
 export "PATH=$HOME/bin:$PATH"
 
 # >>> conda initialize >>>
