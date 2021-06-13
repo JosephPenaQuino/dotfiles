@@ -102,12 +102,14 @@ source $ZSH/oh-my-zsh.sh
 alias lss="ls -lhtr"
 
 # Created by `userpath` on 2021-01-25 16:13:40
-export PATH="$PATH:/home/joseph/.local/bin"
-export PATH="$PATH:/home/joseph/Programs/gcc-arm-none-eabi-9-2020-q2-update/bin"
-export PATH="$PATH:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin"
-export PATH="$HOME/STM32MPU_workspace/STM32MPU-Tools/STM32CubeProgrammer-x.y.z/bin:$PATH"
+export PATH="$PATH:$HOME/bin"
+export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/Programs/gcc-arm-none-eabi-9-2020-q2-update/bin"
 export PATH="$PATH:$HOME/Programs/gcc-arm-10.2-2020.11-x86_64-arm-none-linux-gnueabihf/bin"
-export "PATH=$HOME/bin:$PATH"
+export PATH="$PATH:$HOME/STM32MPU_workspace/STM32MPU-Tools/STM32CubeProgrammer-x.y.z/bin"
+export PATH="$PATH:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin"
+# Enable arm-linux-gnueabihf 8.3
+export PATH="$PATH:/opt/cross-gcc-8.3.0-pi_3+/cross-pi-gcc-8.3.0-2/bin"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
