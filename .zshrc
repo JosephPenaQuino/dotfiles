@@ -97,7 +97,8 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
- alias zshconfig="vim ~/.zshrc"
+alias zshconfig="vim ~/.zshrc"
+alias zshsource="source ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias lss="ls -lhtr"
 
@@ -154,3 +155,8 @@ alias genEspIdfYcm='~/.vim/bundle/YCM-Generator/config_gen.py -c $(which xtensa-
 export FZF_DEFAULT_OPS="--extended"
 
 fpath+=${ZDOTDIR:-~}/.zsh_functions
+
+alias cmakegdb='cmake -DCMAKE_BUILD_TYPE=Debug ..'
+alias cmakeclang='cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1 ..'
+alias cmakesanitizer='cmake .. -DCMAKE_CXX_FLAGS="-fsanitize=address  -fsanitize=leak -g" -DCMAKE_C_FLAGS="-fsanitize=address  -fsanitize=leak -g" -DCMAKE_EXE_LINKER_FLAGS="-fsanitize=address  -fsanitize=leak" -DCMAKE_MODULE_LINKER_FLAGS="-fsanitize=address  -fsanitize=leak"'
+alias gitl='git log --graph --reflog'
