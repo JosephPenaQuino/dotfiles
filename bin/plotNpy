@@ -16,7 +16,7 @@ def getTitle(index, im, num, limits, stats, offset):
 		title +=f"\navg: {avg}, med: {med}"
 	return size, title
 
-def picshow(img, limits, stats, offset):
+def picshow(img, limits, stats, offset, titles=None):
 	num = len(img)
 	ay = np.ceil(np.sqrt(num))
 	ax = np.rint(np.sqrt(num))
@@ -24,9 +24,13 @@ def picshow(img, limits, stats, offset):
 	for i in range(num):
 		im = img[i]
 		titleSize, title = getTitle(i, im, num, limits=limits, stats=stats, offset=offset)
+		if titles != None:
+			title = title +'\n'+titles[i]
 		sub = fig.add_subplot(ax,ay,i+1)
 		sub.set_title(title, size=titleSize)
 		sub.axis('off')
+		if len(im.shape) == 3:
+			im = im[:, :, 0]
 		if np.amax(im) < 20:
 			plt.imshow(im, cmap='jet', interpolation='nearest')
 		else:
