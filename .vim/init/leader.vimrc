@@ -9,3 +9,6 @@ nmap <leader>p :r! cat /tmp/vitmp<CR>
 nmap <leader>n :bn<CR>
 nmap <leader>N :bN<CR>
 
+" Insert a new line
+nmap <leader>o o<ESC>
+nmap <leader>O O<ESC>
