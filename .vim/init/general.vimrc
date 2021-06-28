@@ -33,7 +33,7 @@ set relativenumber
 set statusline +=%F
 
 " Colortheme
-colorscheme dracula
+colorscheme molokai
 
 " Color typedefs, unions and structs
 match Type "\h\w*_t\w\@!"
