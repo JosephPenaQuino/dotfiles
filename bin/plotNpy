@@ -31,7 +31,7 @@ def picshow(img, limits, stats, offset, titles=None):
 		sub.axis('off')
 		if len(im.shape) == 3:
 			im = im[:, :, 0]
-		if np.amax(im) < 20:
+		if np.amax(im) < 20 or np.amax(im) > 256:
 			plt.imshow(im, cmap='jet', interpolation='nearest')
 		else:
 			plt.imshow(im, cmap='jet', interpolation='nearest', vmin=0, vmax=255)
