@@ -10,5 +10,5 @@ nmap <leader>n :bn<CR>
 nmap <leader>N :bN<CR>
 
 " Insert a new line
-nmap <leader>o o<ESC>
-nmap <leader>O O<ESC>
+nnoremap <Leader>o o<Esc>0"_D
+nnoremap <Leader>O O<Esc>0"_D
