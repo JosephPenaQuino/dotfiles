@@ -14,7 +14,6 @@ Plugin 'dracula/vim', { 'name': 'dracula' }
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'christoomey/vim-system-copy'
-Plugin 'wakatime/vim-wakatime'
 Plugin 'vim-scripts/argtextobj.vim'
 Plugin 'neoclide/coc.nvim', {'for':['zig','cmake','rust',
       \'java','json', 'haskell', 'ts','sh', 'cs',
