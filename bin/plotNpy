@@ -45,6 +45,6 @@ def plot(imagePaths, limits=False, stats=False, offset=0):
 
 if __name__ == "__main__":
 	if len(sys.argv) == 1:
-		printf("You must pass the path of som npy image")
+		print("You must pass the path of som npy image")
 	imagePaths = sys.argv[1:]
 	plot(imagePaths, limits=True, stats=True, offset=0)
