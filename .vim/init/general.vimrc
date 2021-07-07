@@ -33,10 +33,11 @@ set relativenumber
 set statusline +=%F
 
 " Colortheme
-colorscheme molokai
+colorscheme dracula_bold
 
 " Color typedefs, unions and structs
 match Type "\h\w*_t\w\@!"
 set wrap linebreak
 
 autocmd BufRead *.py set expandtab
+
