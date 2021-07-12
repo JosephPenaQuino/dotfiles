@@ -39,4 +39,6 @@ colorscheme dracula_bold
 set wrap linebreak
 
 autocmd BufRead *.py set expandtab
+
+" color any word that ends in _t
 match Type "\h\w*_t\w\@!"
