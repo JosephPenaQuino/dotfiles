@@ -33,12 +33,12 @@ set relativenumber
 set statusline +=%F
 
 " Colortheme
-colorscheme dracula_bold
+colorscheme gruvbox
 
 " Color typedefs, unions and structs
 set wrap linebreak
 
-autocmd BufRead *.py set expandtab
+" autocmd BufRead *.py set expandtab
 
 " color any word that ends in _t
 match Type "\h\w*_t\w\@!"
