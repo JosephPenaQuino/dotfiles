@@ -8,7 +8,7 @@ UseTab: Always
 ---
 Language: Cpp
 
-AlignConsecutiveMacros: true
+AlignConsecutiveMacros: AcrossEmptyLinesAndComments
 IndentCaseLabels: true
 AlignTrailingComments: true
 BreakBeforeBraces: Custom
@@ -21,4 +21,6 @@ AllowShortBlocksOnASingleLine: Never
 
 AlignAfterOpenBracket: Align
 BinPackArguments: false
+AlignOperands: Align
+BreakBeforeBinaryOperators: All
 ---
