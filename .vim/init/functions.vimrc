@@ -21,7 +21,7 @@ function! AutoHighlightToggle()
      au! auto_highlight
      augroup! auto_highlight
      setl updatetime=4000
-     echo 'Highlight current word: off'
+     echo 'Highlight current word: OFF'
      return 0
   else
     augroup auto_highlight
