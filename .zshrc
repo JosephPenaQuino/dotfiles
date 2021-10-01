@@ -165,3 +165,4 @@ alias vimconfig='nvim /home/joseph/.vim/init/plug.vimrc /home/joseph/.vim/init/l
 alias gitl='git log --graph --reflog'
 alias gits='git status'
 alias gitd='git diff'
+. ~/bin/goto

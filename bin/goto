@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+function goto() {
+	goto_paths=$(echo $GOTO_PATHS | tr  ' ' '\n')
+	selected=$(printf "$goto_paths" | fzf)
+	cd $selected
+}
