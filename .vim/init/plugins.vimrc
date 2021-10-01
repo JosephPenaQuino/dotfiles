@@ -187,3 +187,10 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 nmap <leader>gh :diffget //3<CR>
 nmap <leader>gf :diffget //2<CR>
 nmap <leader>gs :G<CR>
+
+" lsp
+lua << EOF
+require'lspconfig'.pyright.setup{}
+require'lspconfig'.clangd.setup{}
+require'lspconfig'.jedi_language_server.setup{}
+EOF
