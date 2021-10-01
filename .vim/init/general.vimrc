@@ -33,6 +33,7 @@ set relativenumber
 set statusline +=%F
 
 " Colortheme
+colorscheme dracula
 colorscheme gruvbox
 
 " Color typedefs, unions and structs
