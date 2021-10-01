@@ -18,9 +18,11 @@ SpaceBeforeParens: ControlStatements
 
 AllowAllArgumentsOnNextLine : false
 AllowShortBlocksOnASingleLine: Never
+AllowShortFunctionsOnASingleLine: None
 
 AlignAfterOpenBracket: Align
 BinPackArguments: false
 AlignOperands: Align
+PenaltyBreakAssignment: 21
 BreakBeforeBinaryOperators: All
 ---
