@@ -1,10 +1,8 @@
-
 " $HOME/.vim/init/plug.vimrc
 
 " Vundle Plugins
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-" Plugin 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 Plugin 'rhysd/vim-clang-format'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vimwiki/vimwiki'
@@ -23,5 +21,6 @@ Plugin 'jackguo380/vim-lsp-cxx-highlight'
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'neovim/nvim-lsp'
+Plugin 'arcticicestudio/nord-vim'
+Plugin 'iamcco/diagnostic-languageserver'
 call vundle#end()            
