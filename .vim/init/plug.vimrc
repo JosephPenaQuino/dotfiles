@@ -23,4 +23,5 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'arcticicestudio/nord-vim'
 Plugin 'iamcco/diagnostic-languageserver'
+Plugin 'github/copilot.vim'
 call vundle#end()            
