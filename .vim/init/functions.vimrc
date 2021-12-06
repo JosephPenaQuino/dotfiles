@@ -42,3 +42,6 @@ fun! ShowFuncName()
   echohl None
 endfun
 map <C-_> :call ShowFuncName() <CR>
+
+" Copy current path to clipboard
+:command! CopyCurrentPath let @+ = expand('%:p')
