@@ -187,3 +187,18 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 nmap <leader>gh :diffget //3<CR>
 nmap <leader>gf :diffget //2<CR>
 nmap <leader>gs :G<CR>
+
+let g:vimspector_enable_mappings = 'HUMAN'
+nmap <leader>dd :call vimspector#Launch()<CR>
+nmap <leader>dx :call vimspector#Reset()<CR>
+nmap <leader>dr :call vimspector#Restart()<CR>
+nmap <leader>di :call vimspector#StepInto()<CR>
+nmap <leader>dv :call vimspector#StepOver()<CR>
+nmap <leader>du :call vimspector#StepOut()<CR>
+nmap <leader>dc :call vimspector#Continue()<CR>
+nmap <leader>drc :call vimspector#RunToCursor()<CR>
+nmap <leader>db :call vimspector#ToggleBreakpoint()<CR>
+nmap <leader>dcb :call vimspector#ToggleAdvancedBreakpoint()<CR>
+nmap <leader>de :vimspectorEval
+nmap <leader>dw :vimspectorWatch
+nmap <leader>do :vimspectorShowOutput
