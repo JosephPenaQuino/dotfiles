@@ -1,0 +1,57 @@
+#!/home/joseph/anaconda3/envs/imageProcessing/bin/python3
+import cv2
+import argparse
+import numpy as np
+import time
+import sys
+
+
+def show(init, quantity, save=False):
+    print(save)
+    print(init, quantity)
+    size = (840, 840)
+    if save:
+        out = cv2.VideoWriter('vid.avi', cv2.VideoWriter_fourcc(*'DIVX'), 5, size)
+    for i in range(init, init+quantity):
+        img = np.load(f'im_{i:04d}.npy')
+        img = cv2.resize(img, size, interpolation=cv2.INTER_CUBIC)
+
+        if type(img[0][0]) != np.uint8:
+            if img.sum() == 0:
+                img = img.astype(np.uint8)
+            else:
+                img = np.interp(img, (0, 550), (0, 255)).astype(np.uint8)
+            # max_val = np.max(img)
+            # min_val = np.min(img)
+            # range_val = max_val - min_val
+            # img = np.uint8(((img - min_val)/range_val)*255)
+        # img = cv2.applyColorMap(img.astype('uint8'), cv2.COLORMAP_JET)
+
+        if save:
+            out.write(img)
+        else:
+            cv2.imshow('my video', img)
+            time.sleep(0.5)
+            if cv2.waitKey(1) == 27:
+                break  # esc to quit
+    if save:
+        out.release()
+    else:
+        cv2.destroyAllWindows()
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument("initial",
+                        help="The number of the first image to be read. eg: 10 from im_0010.npy",
+                        type=int)
+    parser.add_argument("quantity",
+                        help="The quantity of images that are to be read. eg: 10 to read from im_0010.npy until im_0019.npy",
+                        type=int)
+    parser.add_argument("-s", 
+                        "--saveVideo", 
+                        help="Save video instead of playing it", 
+                        action="store_true",
+                        default=False)
+    args = parser.parse_args()
+    show(init=args.initial, quantity=args.quantity, save=args.saveVideo)
