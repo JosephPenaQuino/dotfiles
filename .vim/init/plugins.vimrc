@@ -189,8 +189,21 @@ nmap <leader>gf :diffget //2<CR>
 nmap <leader>gs :G<CR>
 
 let g:vimspector_enable_mappings = 'HUMAN'
+fun GotoWindow(id)
+	call win_gotoid(a:id)
+	MaximizerToggle
+endfun
+
+nnoremap <leader>m :MaximizerToggle!<CR>
 nmap <leader>dd :call vimspector#Launch()<CR>
+nnoremap <leader>dgc :call GotoWindow(g:vimspector_session_windows.code)<CR>
+nnoremap <leader>dgt :call GotoWindow(g:vimspector_session_windows.tagpages)<CR>
+nnoremap <leader>dgv :call GotoWindow(g:vimspector_session_windows.variables)<CR>
+nnoremap <leader>dgw :call GotoWindow(g:vimspector_session_windows.watches)<CR>
+nnoremap <leader>dgs :call GotoWindow(g:vimspector_session_windows.stack_trace)<CR>
+nnoremap <leader>dgo :call GotoWindow(g:vimspector_session_windows.output)<CR>
 nmap <leader>dx :call vimspector#Reset()<CR>
+nnoremap <leader>dtcb :call vimspector#ClearLineBreakpoint()<CR>
 nmap <leader>dr :call vimspector#Restart()<CR>
 nmap <leader>di :call vimspector#StepInto()<CR>
 nmap <leader>dv :call vimspector#StepOver()<CR>
@@ -202,3 +215,4 @@ nmap <leader>dcb :call vimspector#ToggleAdvancedBreakpoint()<CR>
 nmap <leader>de :vimspectorEval
 nmap <leader>dw :vimspectorWatch
 nmap <leader>do :vimspectorShowOutput
+
