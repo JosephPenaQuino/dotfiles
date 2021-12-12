@@ -37,6 +37,8 @@
 			"sourceName": "pylint",
 			"command": "pylint",
 			"args": [
+				"--rcfile",
+				"/home/joseph/.config/.pylintrc",
 				"--output-format",
 				"text",
 				"--score",

@@ -23,4 +23,7 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'arcticicestudio/nord-vim'
 Plugin 'iamcco/diagnostic-languageserver'
+Plugin 'github/copilot.vim'
+Plugin 'szw/vim-maximizer'
+Plugin 'puremourning/vimspector'
 call vundle#end()            
