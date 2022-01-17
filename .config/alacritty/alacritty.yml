@@ -9,6 +9,7 @@ shell:
         - "tmux attach || tmux"
 import:
   - /home/joseph/.config/themes/alacritty-master/dracula.yml
+  - /home/joseph/.config/themes/alacritty-theme/themes/blood_moon.yaml
 
 key_bindings:
     - { key: Return,   mods: Control|Shift,          action: SpawnNewInstance }  # New alacritty window
@@ -32,4 +33,4 @@ key_bindings:
     - { key: P,        mode: Vi, action: Paste                   }
     # - { key: U,        mode: Vi, action: Undo                    }
     #- { key: Space,  mods: Shift|Control, mode: Vi, action: ScrollToBottom          }
-background_opacity: .90
+window.opacity: .999

@@ -1,50 +1,60 @@
-#!/usr/bin/python3
+#!/home/joseph/anaconda3/envs/imageProcessing/bin/python3
 import sys
 import matplotlib.pyplot as plt
 import numpy as np
+import warnings
+
+warnings.filterwarnings( "ignore")
 
 def getTitle(index, im, num, limits, stats, offset):
-	title = f"index: {index+offset}"
-	size = 12
-	if num > 5:
-		size = 9
-	if limits:
-		title +=f"\nmin: {np.min(im)}, max: {np.max(im)}" 
-	if stats:
-		avg = round(np.average(im), 3)
-		med = np.median(im)
-		title +=f"\navg: {avg}, med: {med}"
-	return size, title
+    title = f"index: {index+offset}"
+    size = 12
+    if num > 5:
+        size = 9
+    if limits:
+        title +=f"\nmin: {round(np.min(im), 3)}, max: {round(np.max(im), 3)}"
+    if stats:
+        avg = np.average(im)
+        med = np.median(im)
+        title +=f"\navg: {round(avg, 3):0.3f}, med: {round(med, 3):0.3f},\n shape: {im.shape}"
+    return size, title
 
 def picshow(img, limits, stats, offset, titles=None):
-	num = len(img)
-	ay = np.ceil(np.sqrt(num))
-	ax = np.rint(np.sqrt(num))
-	fig = plt.figure(figsize=(10,12))
-	for i in range(num):
-		im = img[i]
-		titleSize, title = getTitle(i, im, num, limits=limits, stats=stats, offset=offset)
-		if titles != None:
-			title = title +'\n'+titles[i]
-		sub = fig.add_subplot(ax,ay,i+1)
-		sub.set_title(title, size=titleSize)
-		sub.axis('off')
-		if len(im.shape) == 3:
-			im = im[:, :, 0]
-		if np.amax(im) < 20 or np.amax(im) > 256:
-			plt.imshow(im, cmap='jet', interpolation='nearest')
-		else:
-			plt.imshow(im, cmap='jet', interpolation='nearest', vmin=0, vmax=255)
+    num = len(img)
+    ay = np.ceil(np.sqrt(num))
+    ax = np.rint(np.sqrt(num))
+    fig = plt.figure(figsize=(10,12))
+    for i in range(num):
+        im = img[i]
+        titleSize, title = getTitle(
+            i,
+            im,
+            num,
+            limits=limits,
+            stats=stats,
+            offset=offset,
+            )
+        if titles != None:
+            title = title +'\n'+titles[i]
+        sub = fig.add_subplot(ax, ay, i+1)
+        sub.set_title(title, size=titleSize)
+        sub.axis('off')
+        if len(im.shape) == 3:
+            im = im[:, :, 0]
+        if np.amax(im) < 20 or np.amax(im) > 256:
+            plt.imshow(im, cmap='jet', interpolation='nearest')
+        else:
+            plt.imshow(im, cmap='jet', interpolation='nearest', vmin=0, vmax=255)
 
 def plot(imagePaths, limits=False, stats=False, offset=0):
-	images = []
-	for i in range(len(imagePaths)):
-		images.append(np.load(imagePaths[i]))
-	picshow(images, limits=limits, stats=stats, offset=offset)
-	plt.show()
+    images = []
+    for i in range(len(imagePaths)):
+        images.append(np.load(imagePaths[i]))
+    picshow(images, limits=limits, stats=stats, offset=offset)
+    plt.show()
 
 if __name__ == "__main__":
-	if len(sys.argv) == 1:
-		print("You must pass the path of som npy image")
-	imagePaths = sys.argv[1:]
-	plot(imagePaths, limits=True, stats=True, offset=0)
+    if len(sys.argv) == 1:
+        print("You must pass the path of som npy image")
+    imagePaths = sys.argv[1:]
+    plot(imagePaths, limits=True, stats=True, offset=0)

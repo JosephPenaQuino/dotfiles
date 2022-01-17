@@ -34,7 +34,7 @@ set statusline +=%F
 
 " Colortheme
 colorscheme gruvbox
-colorscheme nord
+colorscheme molokai_dark
 
 " Color typedefs, unions and structs
 set wrap linebreak
