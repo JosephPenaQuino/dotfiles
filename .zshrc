@@ -177,6 +177,7 @@ alias vimconfig='nvim /home/joseph/.vim/init/plug.vimrc /home/joseph/.vim/init/l
 alias gitl='git log --graph --reflog'
 alias gits='git status'
 alias gitd='git diff'
+alias gitt='git --no-pager tag'
 . ~/bin/goto
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
