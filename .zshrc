@@ -109,7 +109,7 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="vim ~/.zshrc"
+alias zshconfig="nvim ~/.zshrc"
 alias zshsource="source ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias lss="ls -lhtr"
@@ -149,8 +149,10 @@ tabs 4
 alias config='/usr/bin/git --git-dir=/home/joseph/.cfg/ --work-tree=/home/joseph'
 
 # ESP
-alias get_idf='. $HOME/esp/esp-idf/export.sh'
-IDF_PATH="$HOME/esp/esp-idf"
+# alias get_idf='. $HOME/esp/esp-idf/export.sh'
+# IDF_PATH="$HOME/esp/esp-idf"
+alias get_idf='. $HOME/tools/esp-idf-v4.4/export.sh'
+IDF_PATH="$HOME/tools/esp-idf-v4.4"
 
 # Copy current path to clipboard
 alias cpwd='pwd | xsel -i -b'
@@ -175,6 +177,7 @@ alias vimconfig='nvim /home/joseph/.vim/init/plug.vimrc /home/joseph/.vim/init/l
 
 # Git shortchuts
 alias gitl='git log --graph --reflog'
+alias gitll='g log --oneline --decorate'
 alias gits='git status'
 alias gitd='git diff'
 alias gitt='git --no-pager tag'
