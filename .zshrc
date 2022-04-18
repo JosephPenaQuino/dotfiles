@@ -152,6 +152,9 @@ alias config='/usr/bin/git --git-dir=/home/joseph/.cfg/ --work-tree=/home/joseph
 alias get_idf='. $HOME/esp/esp-idf/export.sh'
 IDF_PATH="$HOME/esp/esp-idf"
 
+# Cekeikon
+alias get_cekeikon='source ~/cekeikon5/bin/ativa_cekcpu'
+
 # Copy current path to clipboard
 alias cpwd='pwd | xsel -i -b'
 source ~/.omni_env 2> /dev/null
