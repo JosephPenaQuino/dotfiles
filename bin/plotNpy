@@ -46,11 +46,11 @@ def picshow(img, limits, stats, offset, titles=None):
         else:
             plt.imshow(im, cmap='jet', interpolation='nearest', vmin=0, vmax=255)
 
-def plot(imagePaths, limits=False, stats=False, offset=0):
+def plot(imagePaths, limits=False, stats=False, offset=0, imageNames=None):
     images = []
     for i in range(len(imagePaths)):
         images.append(np.load(imagePaths[i]))
-    picshow(images, limits=limits, stats=stats, offset=offset)
+    picshow(images, limits=limits, stats=stats, offset=offset, titles=imageNames)
     plt.show()
 
 if __name__ == "__main__":
