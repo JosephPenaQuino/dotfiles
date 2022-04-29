@@ -176,7 +176,14 @@ fpath+=${ZDOTDIR:-~}/.zsh_functions
 alias cmakegdb='cmake -DCMAKE_BUILD_TYPE=Debug ..'
 alias cmakeclang='cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1 ..'
 alias cmakesanitizer='cmake .. -DCMAKE_CXX_FLAGS="-fsanitize=address  -fsanitize=leak -g" -DCMAKE_C_FLAGS="-fsanitize=address  -fsanitize=leak -g" -DCMAKE_EXE_LINKER_FLAGS="-fsanitize=address  -fsanitize=leak" -DCMAKE_MODULE_LINKER_FLAGS="-fsanitize=address  -fsanitize=leak"'
-alias vimconfig='nvim /home/joseph/.vim/init/plug.vimrc /home/joseph/.vim/init/leader.vimrc /home/joseph/.vim/init/general.vimrc /home/joseph/.vim/init/plugins.vimrc /home/joseph/.vim/init/functions.vimrc'
+alias vimconfig=\
+"nvim /home/joseph/.vim/init/plug.vimrc "\
+"/home/joseph/.vim/init/leader.vimrc "\
+"/home/joseph/.vim/init/general.vimrc "\
+"/home/joseph/.vim/init/plugins.vimrc "\
+"/home/joseph/.vim/init/functions.vimrc "\
+"/home/joseph/.vim/after/ftplugin/*"
+
 
 # Git shortchuts
 alias gitl='git log --graph --reflog'
