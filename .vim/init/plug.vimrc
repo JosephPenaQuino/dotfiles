@@ -26,4 +26,5 @@ Plugin 'iamcco/diagnostic-languageserver'
 Plugin 'github/copilot.vim'
 Plugin 'szw/vim-maximizer'
 Plugin 'puremourning/vimspector'
+Plugin 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call vundle#end()            
