@@ -27,4 +27,5 @@ Plugin 'github/copilot.vim'
 Plugin 'szw/vim-maximizer'
 Plugin 'puremourning/vimspector'
 Plugin 'mtoohey31/chafa.vim'
+Plugin 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call vundle#end()            
