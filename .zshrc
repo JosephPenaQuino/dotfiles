@@ -82,6 +82,9 @@ POWERLEVEL10k_MODE=(dir rbenv vcs)
 plugins=(
 	git
 	zsh-autosuggestions
+	git-flow
+	gitignore
+	colored-man-pages
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -94,11 +97,13 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+  export VISUAL='vim'
+else
+  export EDITOR='nvim'
+  export VISUAL='nvim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -165,8 +170,10 @@ source ~/.personal_env 2> /dev/null
 # Install Ruby Gems to ~/gems' 
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
+
 # Vim 
 alias genEspIdfYcm='~/.vim/bundle/YCM-Generator/config_gen.py -c $(which xtensa-esp32-elf-gcc) --verbose --preserve-environment .'
+alias v='nvim'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPS="--extended"
