@@ -26,4 +26,5 @@ Plugin 'iamcco/diagnostic-languageserver'
 Plugin 'github/copilot.vim'
 Plugin 'szw/vim-maximizer'
 Plugin 'puremourning/vimspector'
+Plugin 'mtoohey31/chafa.vim'
 call vundle#end()            
