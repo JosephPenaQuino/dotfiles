@@ -177,7 +177,7 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 " Coc Shortcuts
 nmap <leader>B :Buffers<cr>
-nmap <leader>G :GFiles<cr>
+nmap <leader>G :GFiles --recurse-submodules<cr>
 nmap <leader>F :Files<cr>
 
 " ag
