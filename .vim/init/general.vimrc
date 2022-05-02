@@ -34,10 +34,10 @@ set statusline +=%F
 
 " Colortheme
 colorscheme gruvbox
-colorscheme molokai_dark
 
 " Color typedefs, unions and structs
 set wrap linebreak
 
 " autocmd BufRead *.py set expandtab
 
+set termguicolors
