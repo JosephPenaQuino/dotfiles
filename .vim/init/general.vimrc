@@ -41,3 +41,7 @@ set wrap linebreak
 " autocmd BufRead *.py set expandtab
 
 set termguicolors
+
+" remove trailing whitespace
+autocmd BufWritePre * :%s/\s\+$//e
+
