@@ -35,8 +35,10 @@
 	"diagnostic-languageserver.linters": {
 		"pylint": {
 			"sourceName": "pylint",
-			"command": "pylint",
+			"command": "python",
 			"args": [
+				"-m",
+				"pylint",
 				"--rcfile",
 				"/home/joseph/.config/.pylintrc",
 				"--output-format",
