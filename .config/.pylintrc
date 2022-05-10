@@ -75,6 +75,8 @@ confidence=
 # no Warning level messages displayed, use "--disable=all --enable=classes
 # --disable=W".
 disable=print-statement,
+        logging-fstring-interpolation,
+        broad-except,
         parameter-unpacking,
         unpacking-in-except,
         old-raise-syntax,
@@ -271,6 +273,8 @@ good-names=i,
            k,
            ex,
            Run,
+           id,
+           e,
            _
 
 # Good variable names regexes, separated by a comma. If names match any regex,
