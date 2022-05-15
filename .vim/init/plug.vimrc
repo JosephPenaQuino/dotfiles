@@ -21,11 +21,10 @@ Plugin 'jackguo380/vim-lsp-cxx-highlight'
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'arcticicestudio/nord-vim'
 Plugin 'iamcco/diagnostic-languageserver'
 Plugin 'github/copilot.vim'
 Plugin 'szw/vim-maximizer'
 Plugin 'puremourning/vimspector'
 Plugin 'mtoohey31/chafa.vim'
 Plugin 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-call vundle#end()            
+call vundle#end()
