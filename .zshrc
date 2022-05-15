@@ -80,6 +80,7 @@ POWERLEVEL10k_MODE=(dir rbenv vcs)
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+	git-auto-fetch
 	git
 	zsh-autosuggestions
 	git-flow
@@ -150,7 +151,7 @@ alias vg_mem='valgrind --leak-check=full -v --track-origins=yes'
 # Set size
 tabs 4
 
-# Git 
+# Git
 alias config='/usr/bin/git --git-dir=/home/joseph/.cfg/ --work-tree=/home/joseph'
 
 # ESP
@@ -167,11 +168,11 @@ alias cpwd='pwd | xsel -i -b'
 source ~/.omni_env 2> /dev/null
 source ~/.personal_env 2> /dev/null
 
-# Install Ruby Gems to ~/gems' 
+# Install Ruby Gems to ~/gems'
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
 
-# Vim 
+# Vim
 alias genEspIdfYcm='~/.vim/bundle/YCM-Generator/config_gen.py -c $(which xtensa-esp32-elf-gcc) --verbose --preserve-environment .'
 alias v='nvim'
 
@@ -204,3 +205,5 @@ alias gitt='git --no-pager tag'
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 alias dps='docker ps -a --format "table {{.Image}}\t{{.Status}}\t{{.Names}}"'
 alias v='nvim'
+alias git-sninppest='bat .oh-my-zsh/plugins/git/README.md'
+alias t="tree -I 'venv|__pycache__|*.tar.gz' -v"
