@@ -4,7 +4,7 @@
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_statusline_ontop = 1
 
-" clang 
+" clang
 let g:clang_detect_style_file = 1
 let g:clang_format#auto_format = 1
 
@@ -216,6 +216,7 @@ nmap <leader>de :vimspectorEval
 nmap <leader>dw :vimspectorWatch
 nmap <leader>do :vimspectorShowOutput
 
+
 " enable Treesitter
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
@@ -246,4 +247,5 @@ require'nvim-treesitter.configs'.setup {
   },
 }
 EOF
+
 
