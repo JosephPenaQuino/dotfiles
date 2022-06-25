@@ -206,7 +206,10 @@ alias gitt='git --no-pager tag'
 alias dps='docker ps -a --format "table {{.Image}}\t{{.Status}}\t{{.Names}}"'
 alias v='nvim'
 alias git-sninppest='bat .oh-my-zsh/plugins/git/README.md'
-alias t="tree -I 'venv|__pycache__|*.tar.gz' -v"
+alias t="tree -I 'venv|__pycache__|*.tar.gz|build*|*.npy' -v"
+
+# zsh highlight
+source $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # cuda things
 export LD_LIBRARY_PATH=/usr/lib/cuda/lib64:$LD_LIBRARY_PATH
