@@ -207,3 +207,13 @@ alias dps='docker ps -a --format "table {{.Image}}\t{{.Status}}\t{{.Names}}"'
 alias v='nvim'
 alias git-sninppest='bat .oh-my-zsh/plugins/git/README.md'
 alias t="tree -I 'venv|__pycache__|*.tar.gz' -v"
+
+# cuda things
+export LD_LIBRARY_PATH=/usr/lib/cuda/lib64:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/usr/lib/cuda/include:$LD_LIBRARY_PATH
+export TF_CPP_MIN_LOG_LEVEL='3'
+alias enable_ml=\
+'conda activate ml; '\
+'echo $CONDA_PREFIX; '\
+'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/; '\
+'export TF_CPP_MIN_LOG_LEVEL="3"'
