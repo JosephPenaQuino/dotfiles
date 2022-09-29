@@ -21,7 +21,6 @@ Plugin 'jackguo380/vim-lsp-cxx-highlight'
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'arcticicestudio/nord-vim'
 Plugin 'iamcco/diagnostic-languageserver'
 Plugin 'github/copilot.vim'
 Plugin 'szw/vim-maximizer'

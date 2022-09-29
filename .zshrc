@@ -216,3 +216,12 @@ source $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/jre"
 export CNG_PATH="/home/joseph/tools/contiki-ng-43"
 alias contiker="docker run --privileged --sysctl net.ipv6.conf.all.disable_ipv6=0 --mount type=bind,source=$CNG_PATH,destination=/home/user/contiki-ng -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v /dev/bus/usb:/dev/bus/usb -ti contiker/contiki-ng"
+## cuda things
+#export LD_LIBRARY_PATH=/usr/lib/cuda/lib64:$LD_LIBRARY_PATH
+#export LD_LIBRARY_PATH=/usr/lib/cuda/include:$LD_LIBRARY_PATH
+#export TF_CPP_MIN_LOG_LEVEL='3'
+#alias enable_ml=\
+#'conda activate ml; '\
+#'echo $CONDA_PREFIX; '\
+#'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/; '\
+#'export TF_CPP_MIN_LOG_LEVEL="3"'
