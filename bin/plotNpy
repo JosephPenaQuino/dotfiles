@@ -1,12 +1,28 @@
 #!/home/joseph/anaconda3/envs/imageProcessing/bin/python3
+'''
+Plot npy files
+'''
+
 import sys
+import warnings
+import argparse
 import matplotlib.pyplot as plt
 import numpy as np
-import warnings
 
 warnings.filterwarnings( "ignore")
 
-def getTitle(index, im, num, limits, stats, offset, enable_index=False):
+def get_title(
+    index: int,
+    img: np.ndarray,
+    num: int,
+    limits: bool,
+    stats: bool,
+    offset: int,
+    enable_index: bool=False
+    ):
+    '''
+    Generate the size and the title of the image
+    '''
     if enable_index:
         title = f"index: {index+offset}"
     else:
@@ -15,11 +31,11 @@ def getTitle(index, im, num, limits, stats, offset, enable_index=False):
     if num > 5:
         size = 9
     if limits:
-        title +=f"\nmin: {round(np.min(im), 3)}, max: {round(np.max(im), 3)}"
+        title +=f"\nmin: {round(np.min(img), 3)}, max: {round(np.max(img), 3)}"
     if stats:
-        avg = np.average(im)
-        med = np.median(im)
-        title +=f"\navg: {round(avg, 3):0.3f}, med: {round(med, 3):0.3f},\n shape: {im.shape}"
+        avg = np.average(img)
+        med = np.median(img)
+        title +=f"\navg: {round(avg, 3):0.3f}, med: {round(med, 3):0.3f},\n shape: {img.shape}"
     return size, title
 
 def picshow(img, limits, stats, offset, titles=None, enable_index=True):
@@ -29,7 +45,7 @@ def picshow(img, limits, stats, offset, titles=None, enable_index=True):
     fig = plt.figure(figsize=(10,12))
     for i in range(num):
         im = img[i]
-        titleSize, title = getTitle(
+        titleSize, title = get_title(
             i,
             im,
             num,
@@ -60,7 +76,17 @@ def plot(imagePaths, limits=False, stats=False, offset=0, imageNames=None,
     plt.show()
 
 if __name__ == "__main__":
-    if len(sys.argv) == 1:
-        print("You must pass the path of som npy image")
-    imagePaths = sys.argv[1:]
-    plot(imagePaths, limits=True, stats=True, offset=0)
+    parser = argparse.ArgumentParser()
+    parser.add_argument('img_file_paths', nargs='+')
+    parser.add_argument('--no-index', dest='no_index', action='store_true', default=False)
+    parser.add_argument('--limits', action='store_true', default=False)
+    parser.add_argument('--stats', action='store_true', default=False)
+    parser.add_argument('--offset', type=int, default=0)
+    args = parser.parse_args()
+    plot(
+        args.img_file_paths,
+        limits=args.limits,
+        stats=args.stats,
+        offset=args.offset,
+        enable_index=not args.no_index
+    )
