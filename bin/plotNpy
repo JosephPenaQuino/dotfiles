@@ -40,7 +40,7 @@ def picshow(img, limits, stats, offset, titles=None, enable_index=True):
             )
         if titles != None:
             title = title +'\n'+titles[i]
-        sub = fig.add_subplot(ax, ay, i+1)
+        sub = fig.add_subplot(int(ax), int(ay), int(i+1))
         sub.set_title(title, size=titleSize)
         sub.axis('off')
         if len(im.shape) == 3:
