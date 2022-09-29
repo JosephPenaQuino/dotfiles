@@ -158,7 +158,9 @@ alias config='/usr/bin/git --git-dir=/home/joseph/.cfg/ --work-tree=/home/joseph
 # alias get_idf='. $HOME/esp/esp-idf/export.sh'
 # IDF_PATH="$HOME/esp/esp-idf"
 alias get_idf='. $HOME/tools/esp-idf-v4.4/export.sh'
-IDF_PATH="$HOME/tools/esp-idf-v4.4"
+# IDF_PATH="$HOME/tools/esp-idf-v4.4"
+alias get_idf_5='. $HOME/tools/esp-idf-release-v5.0/export.sh'
+# IDF_PATH="$HOME/tools/esp-idf-v4.4"
 
 # Cekeikon
 alias get_cekeikon='source ~/cekeikon5/bin/ativa_cekcpu'
@@ -210,3 +212,7 @@ alias t="tree -I 'venv|__pycache__|*.tar.gz|build*|*.npy' -v"
 
 # zsh highlight
 source $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/jre"
+export CNG_PATH="/home/joseph/tools/contiki-ng-43"
+alias contiker="docker run --privileged --sysctl net.ipv6.conf.all.disable_ipv6=0 --mount type=bind,source=$CNG_PATH,destination=/home/user/contiki-ng -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v /dev/bus/usb:/dev/bus/usb -ti contiker/contiki-ng"
