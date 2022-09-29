@@ -70,5 +70,12 @@
 			"offsetColumn": 1,
 			"formatLines": 1
 		}
-	}
+	},
+	"clangd.checkUpdates": true,
+	"clangd.arguments": [
+		"--enable-config",
+		"--background-index",
+		"--query-driver=/home/joseph/Programs/gcc-arm-none-eabi-9-2020-q2-update/bin/arm-none-eabi-gcc,/home/joseph/.espressif/tools/xtensa-esp32-elf/esp-2021r2-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc"
+	],
+  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/15.0.1/clangd_15.0.1/bin/clangd"
 }
