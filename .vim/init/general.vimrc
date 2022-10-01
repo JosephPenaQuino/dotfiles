@@ -45,3 +45,5 @@ set termguicolors
 " remove trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
 
+
+highlight MatchParen gui=underline guibg=black guifg=NONE
