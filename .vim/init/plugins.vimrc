@@ -248,4 +248,4 @@ require'nvim-treesitter.configs'.setup {
 }
 EOF
 
-
+let g:coc_node_path = '/home/joseph/.nvm/versions/node/v16.17.1/bin/node'
