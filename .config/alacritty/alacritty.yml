@@ -21,7 +21,7 @@ key_bindings:
     - { key: Tab,      mods: Control,                chars: "\x02\x6e"        }
     - { key: Tab,      mods: Control|Shift,          chars: "\x02\x70"        }
     #- { key: Paste,                                action: Paste          }
-    #- { key: L,         mods: Control,             action: ClearLogNotice }
+    - { key: L,         mods: Control|Shift,         chars: "\x01:clear\n" }
     #- { key: L,         mods: Control, mode: ~Vi,  chars: "\x0c"          }
     #- { key: PageUp,    mods: Shift,   mode: ~Alt, action: ScrollPageUp,  }
     #- { key: PageDown,  mods: Shift,   mode: ~Alt, action: ScrollPageDown }
