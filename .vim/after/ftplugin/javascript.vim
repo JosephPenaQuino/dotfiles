@@ -2,5 +2,5 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set autoindent
-ClangFormatAutoDisable
 set expandtab
+autocmd BufNewFile * :ClangFormatAutoDisable
