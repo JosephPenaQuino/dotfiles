@@ -210,7 +210,7 @@ alias git-sninppest='bat .oh-my-zsh/plugins/git/README.md'
 alias t="tree -I 'venv|__pycache__|*.tar.gz|build*|*.npy' -v"
 
 # zsh highlight
-source $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/jre"
 export CNG_PATH="/home/joseph/tools/contiki-ng-43"
@@ -224,3 +224,7 @@ alias contiker="docker run --privileged --sysctl net.ipv6.conf.all.disable_ipv6=
 #'echo $CONDA_PREFIX; '\
 #'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/; '\
 #'export TF_CPP_MIN_LOG_LEVEL="3"'
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
