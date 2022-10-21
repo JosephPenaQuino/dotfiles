@@ -206,7 +206,6 @@ alias gitt='git --no-pager tag'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 alias dps='docker ps -a --format "table {{.Image}}\t{{.Status}}\t{{.Names}}"'
-alias v='nvim'
 alias git-sninppest='bat .oh-my-zsh/plugins/git/README.md'
 alias t="tree -I 'venv|__pycache__|*.tar.gz|build*|*.npy' -v"
 
