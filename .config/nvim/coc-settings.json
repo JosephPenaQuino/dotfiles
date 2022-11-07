@@ -1,4 +1,10 @@
 {
+	"python.linting.flake8Enabled": true,
+	"pyright.testing.provider": "pytest",
+	"python.linting.pycodestyleEnabled": true,
+	"python.linting.pydocstyleEnabled": true,
+	"python.linting.mypyEnabled": true,
+	"python.linting.banditEnabled": true,
 	"diagnostic-languageserver.filetypes": {
 		"python": "pylint"
 	},
