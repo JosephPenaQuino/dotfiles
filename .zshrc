@@ -228,4 +228,8 @@ alias contiker="docker run --privileged --sysctl net.ipv6.conf.all.disable_ipv6=
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox,build,venv,.pytest_cache,__pycache__}'
+alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox,.venv,.mypy_cache,.pytest_cache,.cache,.eggs,build,dist,node_modules,__pycache__,venv}'
+
+# Poetry
+fpath+=~/.config/zfunc
+autoload -Uz compinit && compinit
