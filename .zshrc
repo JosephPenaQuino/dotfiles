@@ -86,6 +86,7 @@ plugins=(
 	git-flow
 	gitignore
 	colored-man-pages
+	vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh
