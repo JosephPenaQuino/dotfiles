@@ -33,7 +33,7 @@ set relativenumber
 set statusline +=%F
 
 " Colortheme
-colorscheme gotham256
+colorscheme gruvbox
 
 " Color typedefs, unions and structs
 set wrap linebreak
