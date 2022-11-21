@@ -8,7 +8,7 @@ shell:
         - -c
         - "tmux attach || tmux"
 import:
-    - /home/joseph/.config/alacritty/themes/alacritty-theme/themes/gotham.yaml
+    - /home/joseph/.config/alacritty/themes/alacritty-theme/themes/gruvbox_material.yml
 
 key_bindings:
     - { key: Return,   mods: Control|Shift,          action: SpawnNewInstance }  # New alacritty window
