@@ -177,7 +177,6 @@ export PATH="$HOME/gems/bin:$PATH"
 
 # Vim
 alias genEspIdfYcm='~/.vim/bundle/YCM-Generator/config_gen.py -c $(which xtensa-esp32-elf-gcc) --verbose --preserve-environment .'
-alias v='nvim'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPS="--extended"
@@ -235,3 +234,4 @@ alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox,.
 fpath+=~/.config/zfunc
 autoload -Uz compinit && compinit
 alias decolor="sed $'s/\e\\[[0-9;:]*[a-zA-Z]//g' | sed 's/\r//g'"
+alias pp='poetry run python'
