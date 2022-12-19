@@ -61,6 +61,6 @@
 		"--background-index",
 		"--query-driver=/home/joseph/Programs/gcc-arm-none-eabi-9-2020-q2-update/bin/arm-none-eabi-gcc,/home/joseph/.espressif/tools/xtensa-esp32-elf/esp-2021r2-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc"
 	],
-  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/15.0.3/clangd_15.0.3/bin/clangd",
+  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/15.0.6/clangd_15.0.6/bin/clangd",
   "javascript.suggestionActions.enabled": false
 }
