@@ -7,8 +7,8 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv") -- move selected line up
 vim.keymap.set("n", "J", "mzJ`z") -- delete the line below
 vim.keymap.set("n", "<C-d>", "<C-d>zz") -- scroll down but centered
 vim.keymap.set("n", "<C-u>", "<C-u>zz") -- scroll up but centered
-vim.keymap.set("n", "n", "nzzzv") -- TODO
-vim.keymap.set("n", "N", "Nzzzv") -- TODO
+vim.keymap.set("n", "n", "nzzzv") -- Center when forward searching
+vim.keymap.set("n", "N", "Nzzzv") -- Center when backward searching
 
 vim.keymap.set("n", "<leader>vwm", function()
     require("vim-with-me").StartVimWithMe()

@@ -1,7 +1,7 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
 -- Only required if you have packer configured as `opt`
-vim.cmd [[packadd packer.nvim]]
+vim.cmd.packadd('packer.nvim')
 
 return require('packer').startup(function(use)
 	-- Packer can manage itself
@@ -36,6 +36,7 @@ return require('packer').startup(function(use)
 	use('lewis6991/gitsigns.nvim') -- Git signs
 	use('tpope/vim-fugitive')
 	use('tpope/vim-commentary')
+	use('tpope/vim-surround')
 
 	use {
 		'nvim-lualine/lualine.nvim', -- Fancier status line
