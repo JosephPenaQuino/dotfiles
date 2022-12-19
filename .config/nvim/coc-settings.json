@@ -8,14 +8,15 @@
 	"diagnostic-languageserver.filetypes": {
 		"python": "pylint"
 	},
-    "python.linting.banditArgs": [
-        "--skip",
-        "B101"
-    ],
-    "python.linting.flake8Args": [
-        "--ignore",
-        "F401"
-    ],
+	"python.linting.banditArgs": [
+		"--skip",
+		"B101"
+	],
+	"python.linting.flake8Args": [
+		"--ignore",
+		"F401",
+		"F841"
+	],
 	"diagnostic-languageserver.linters": {
 		"pylint": {
 			"sourceName": "pylint",
