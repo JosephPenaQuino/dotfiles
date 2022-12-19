@@ -1,6 +1,7 @@
 # if the same trigger is assigned to multiple actions, all of them are executed
 # in the order they were defined in.
 
+
 shell:
     program: /bin/zsh
     args:
@@ -32,4 +33,6 @@ key_bindings:
     - { key: P,        mode: Vi, action: Paste                   }
     # - { key: U,        mode: Vi, action: Undo                    }
     #- { key: Space,  mods: Shift|Control, mode: Vi, action: ScrollToBottom          }
-window.opacity: .999
+ 
+window:
+    opacity: .9
