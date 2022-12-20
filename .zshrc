@@ -235,3 +235,6 @@ fpath+=~/.config/zfunc
 autoload -Uz compinit && compinit
 alias decolor="sed $'s/\e\\[[0-9;:]*[a-zA-Z]//g' | sed 's/\r//g'"
 alias pp='poetry run python'
+# Install Ruby Gems to ~/gems
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
