@@ -234,7 +234,7 @@ source ~/.config/zfunc/lazy-nvm.sh
 # Poetry
 fpath+=~/.config/zfunc
 autoload -Uz compinit && compinit
-alias decolor="sed $'s/\e\\[[0-9;:]*[a-zA-Z]//g' | sed 's/\r//g'"
+alias decolor="sed $'s/\e\\[[0-9;:]*[a-zA-Z]//g' | sed 's/\r//g' | sed 's/\^\[\[0;31m//g' | sed 's/\^\[\[0;31m//g' | sed 's/\^\[\[0m//g' | sed 's/\^M\\$//g'"
 alias pp='poetry run python'
 # Install Ruby Gems to ~/gems
 export GEM_HOME="$HOME/gems"

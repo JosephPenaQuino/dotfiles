@@ -18,7 +18,12 @@ def show_multiple(initial, qnt, limits, stats, offset):
     files = []
     for i in range(qnt):
         files.append("im_{:04d}.npy".format(initial+i))
-    PLOT_NPY.plot(files, limits, stats, offset)
+    PLOT_NPY.plot(
+        image_paths=files,
+        limits=limits,
+        stats=stats,
+        offset=offset,
+    )
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
