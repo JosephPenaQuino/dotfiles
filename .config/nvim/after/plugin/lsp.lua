@@ -8,6 +8,7 @@ lsp.ensure_installed({
     'sumneko_lua',
     'rust_analyzer',
     'pylsp',
+    'clangd',
 })
 
 lsp.nvim_workspace()
@@ -63,5 +64,16 @@ lsp.on_attach(function(client, bufnr)
     vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
     vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help, opts)
 end)
+
+-- Configure Clangd
+lsp.configure("clangd", {
+    cmd = {
+        "clangd",
+        "--enable-config",
+        "--background-index",
+        "--suggest-missing-includes",
+        "--query-driver=/home/joseph/Programs/gcc-arm-none-eabi-9-2020-q2-update/bin/arm-none-eabi-gcc,/home/joseph/.espressif/tools/xtensa-esp32-elf/esp-2021r2-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc"
+    },
+})
 
 lsp.setup()
