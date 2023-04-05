@@ -42,14 +42,36 @@ vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
-local toggle_search_mode = false
-vim.keymap.set("n", "<leader>k", function()
-	if toggle_search_mode then
-		vim.cmd("nohl")
-		toggle_search_mode = false
-	else
-		vim.cmd("/" .. vim.fn.expand("<cword>"))
-		vim.cmd("normal! N")
-		toggle_search_mode = true
-	end
-end)
+-- local toggle_search_mode = false
+-- vim.keymap.set("n", "<leader>k", function()
+-- 	if toggle_search_mode then
+-- 		vim.cmd("nohl")
+-- 		toggle_search_mode = false
+-- 	else
+-- 		vim.cmd("/" .. vim.fn.expand("<cword>"))
+-- 		vim.cmd("normal! N")
+-- 		toggle_search_mode = true
+-- 	end
+-- end)
+
+local yankGrp = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
+vim.api.nvim_create_autocmd("TextYankPost", {
+  command = "silent! lua vim.highlight.on_yank()",
+  group = yankGrp,
+})
+
+local h1 = vim.api.nvim_create_augroup("HighlightHover", { clear = true })
+vim.api.nvim_create_autocmd("CursorHold", {
+  command = "silent! lua vim.lsp.buf.document_highlight()",
+  group = h1,
+})
+local h2 = vim.api.nvim_create_augroup("HighlightHoverI", { clear = true })
+vim.api.nvim_create_autocmd("CursorHoldI", {
+  command = "silent! lua vim.lsp.buf.document_highlight()",
+  group = h2,
+})
+local h3 = vim.api.nvim_create_augroup("ClearHighlight", { clear = true })
+vim.api.nvim_create_autocmd("CursorMoved", {
+  command = "silent! lua vim.lsp.buf.clear_references()",
+  group = h3,
+})
