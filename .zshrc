@@ -207,7 +207,7 @@ alias gitt='git --no-pager tag'
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 alias dps='docker ps -a --format "table {{.Image}}\t{{.Status}}\t{{.Names}}"'
 alias git-sninppest='bat .oh-my-zsh/plugins/git/README.md'
-alias t="tree -I 'venv|__pycache__|*.tar.gz|build*|*.npy' -v"
+alias t="tree -I 'venv|__pycache__|*.tar.gz|build*|*.npy'"
 
 # zsh highlight
 source $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -236,6 +236,13 @@ fpath+=~/.config/zfunc
 autoload -Uz compinit && compinit
 alias decolor="sed $'s/\e\\[[0-9;:]*[a-zA-Z]//g' | sed 's/\r//g' | sed 's/\^\[\[0;31m//g' | sed 's/\^\[\[0;31m//g' | sed 's/\^\[\[0m//g' | sed 's/\^M\\$//g'"
 alias pp='poetry run python'
+alias pt='poetry run pytest'
 # Install Ruby Gems to ~/gems
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
+alias gcg="git config --edit --global"
+alias gcl="git config --edit --local"
+
+eval "$(pyenv virtualenv-init -)"
+
+export PATH="$PATH:$HOME/.tmux/plugins/tmuxifier/bin"
