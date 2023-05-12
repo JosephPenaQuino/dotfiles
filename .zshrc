@@ -248,3 +248,4 @@ command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 export PATH="$PATH:$HOME/.tmux/plugins/tmuxifier/bin"
+alias tm='tmuxifier'
