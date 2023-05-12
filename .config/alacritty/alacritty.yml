@@ -35,4 +35,4 @@ key_bindings:
     #- { key: Space,  mods: Shift|Control, mode: Vi, action: ScrollToBottom          }
  
 window:
-    opacity: .9
+    opacity: .999

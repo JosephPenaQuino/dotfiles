@@ -10,13 +10,6 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz") -- scroll up but centered
 vim.keymap.set("n", "n", "nzzzv") -- Center when forward searching
 vim.keymap.set("n", "N", "Nzzzv") -- Center when backward searching
 
-vim.keymap.set("n", "<leader>vwm", function()
-	require("vim-with-me").StartVimWithMe()
-end)
-vim.keymap.set("n", "<leader>svwm", function()
-	require("vim-with-me").StopVimWithMe()
-end)
-
 -- greatest remap ever
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
@@ -53,6 +46,9 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 -- 		toggle_search_mode = true
 -- 	end
 -- end)
+
+vim.keymap.set("n", "<leader>w", "<cmd>w<CR>")
+
 
 local yankGrp = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
 vim.api.nvim_create_autocmd("TextYankPost", {
