@@ -74,4 +74,14 @@ return require('packer').startup(function(use)
 	use('norcalli/nvim-terminal.lua')
 	use('j-hui/fidget.nvim')
 	use('neomake/neomake')
+	-- tests
+	use {
+		"nvim-neotest/neotest",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"nvim-treesitter/nvim-treesitter",
+			"antoinemadec/FixCursorHold.nvim",
+			"nvim-neotest/neotest-python",
+		}
+	}
 end)
