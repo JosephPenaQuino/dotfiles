@@ -13,11 +13,15 @@ return require('packer').startup(function(use)
 		-- or                            , branch = '0.1.x',
 		requires = { { 'nvim-lua/plenary.nvim' } }
 	}
+	-- Themes
 	use({
 		'rose-pine/neovim',
 		as = 'rose-pine',
+	})
+	use({
+		'folke/tokyonight.nvim',
 		config = function()
-			vim.cmd('colorscheme rose-pine')
+			vim.cmd('colorscheme tokyonight')
 		end
 	})
 	use(-- Highlight, edit, and navigate code
@@ -74,4 +78,9 @@ return require('packer').startup(function(use)
 	use('norcalli/nvim-terminal.lua')
 	use('j-hui/fidget.nvim')
 	use('neomake/neomake')
+
+	use({ -- markdown
+		"iamcco/markdown-preview.nvim",
+		run = function() vim.fn["mkdp#util#install"]() end,
+	})
 end)
