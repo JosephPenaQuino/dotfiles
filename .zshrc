@@ -237,6 +237,7 @@ autoload -Uz compinit && compinit
 alias decolor="sed $'s/\e\\[[0-9;:]*[a-zA-Z]//g' | sed 's/\r//g' | sed 's/\^\[\[0;31m//g' | sed 's/\^\[\[0;31m//g' | sed 's/\^\[\[0m//g' | sed 's/\^M\\$//g'"
 alias pp='poetry run python'
 alias pt='poetry run pytest'
+alias ptd='poetry run pytest --log-cli-level=DEBUG'
 # Install Ruby Gems to ~/gems
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
@@ -245,7 +246,7 @@ alias gcl="git config --edit --local"
 
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+eval "$(pyenv init --path)"
 
 export PATH="$PATH:$HOME/.tmux/plugins/tmuxifier/bin"
 alias tm='tmuxifier'
