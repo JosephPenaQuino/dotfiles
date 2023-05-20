@@ -24,7 +24,7 @@ return require('packer').startup(function(use)
 			vim.cmd('colorscheme tokyonight')
 		end
 	})
-	use(-- Highlight, edit, and navigate code
+	use( -- Highlight, edit, and navigate code
 		'nvim-treesitter/nvim-treesitter',
 		{ run = ':TSUpdate' }
 	)
@@ -48,7 +48,7 @@ return require('packer').startup(function(use)
 	}
 
 	use 'lukas-reineke/indent-blankline.nvim' -- Indent guides
-	use 'tpope/vim-sleuth' -- Automatically set indent settings
+	use 'tpope/vim-sleuth'                 -- Automatically set indent settings
 
 	use {
 		'VonHeikemen/lsp-zero.nvim',
@@ -88,8 +88,19 @@ return require('packer').startup(function(use)
 			"nvim-neotest/neotest-python",
 		}
 	}
-	use({ -- markdown
+	use({
 		"iamcco/markdown-preview.nvim",
 		run = function() vim.fn["mkdp#util#install"]() end,
 	})
+	-- debug
+	use("mfussenegger/nvim-dap")
+	use("rcarriga/nvim-dap-ui")
+	use("theHamsta/nvim-dap-virtual-text")
+	use("nvim-telescope/telescope-dap.nvim")
+	use("mfussenegger/nvim-dap-python")
+	-- misc
+	use {
+		'stevearc/overseer.nvim',
+		config = function() require('overseer').setup() end
+	}
 end)
