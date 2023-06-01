@@ -13,8 +13,10 @@ vim.keymap.set("n", "N", "Nzzzv") -- Center when backward searching
 -- greatest remap ever
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
+-- replace current word with yanked
+vim.keymap.set("n", "<leader>y", "viwp<CR>")
 -- next greatest remap ever : asbjornHaland
-vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
+-- vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
