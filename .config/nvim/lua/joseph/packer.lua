@@ -103,8 +103,14 @@ return require('packer').startup(function(use)
 	use("nvim-telescope/telescope-dap.nvim")
 	use("mfussenegger/nvim-dap-python")
 	-- misc
-	use {
+	use {  -- execute some things
 		'stevearc/overseer.nvim',
 		config = function() require('overseer').setup() end
+	}
+	use {
+		"folke/todo-comments.nvim",
+		requires = {
+			"nvim-lua/plenary.nvim"
+		}
 	}
 end)
