@@ -24,6 +24,10 @@ return require('packer').startup(function(use)
 			vim.cmd('colorscheme tokyonight')
 		end
 	})
+	use({
+		"ellisonleao/gruvbox.nvim"
+	})
+
 	use( -- Highlight, edit, and navigate code
 		'nvim-treesitter/nvim-treesitter',
 		{ run = ':TSUpdate' }
