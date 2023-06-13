@@ -179,7 +179,10 @@ export PATH="$HOME/gems/bin:$PATH"
 alias genEspIdfYcm='~/.vim/bundle/YCM-Generator/config_gen.py -c $(which xtensa-esp32-elf-gcc) --verbose --preserve-environment .'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_OPS="--extended"
+# export FZF_DEFAULT_OPS="--extended"
+export FZF_DEFAULT_COMMAND="fd --hidden"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND --type d"
 
 fpath+=${ZDOTDIR:-~}/.zsh_functions
 
