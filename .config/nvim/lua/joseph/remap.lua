@@ -73,3 +73,8 @@ vim.api.nvim_create_autocmd("CursorMoved", {
   command = "silent! lua vim.lsp.buf.clear_references()",
   group = h3,
 })
+
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+  pattern = { "*" },
+  command = [[%s/\s\+$//e]],
+})
