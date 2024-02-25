@@ -113,4 +113,6 @@ return require('packer').startup(function(use)
 			"nvim-lua/plenary.nvim"
 		}
 	}
+	-- used for gitemoji
+	use 'olacin/telescope-gitmoji.nvim'
 end)
