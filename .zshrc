@@ -253,3 +253,4 @@ eval "$(pyenv init --path)"
 
 export PATH="$PATH:$HOME/.tmux/plugins/tmuxifier/bin"
 alias tm='tmuxifier'
+alias android="/opt/android-studio/bin/studio.sh"
