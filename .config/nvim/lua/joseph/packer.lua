@@ -9,8 +9,7 @@ return require('packer').startup(function(use)
 
 	-- Telescope.nvim
 	use {
-		'nvim-telescope/telescope.nvim', tag = '0.1.0',
-		-- or                            , branch = '0.1.x',
+		'nvim-telescope/telescope.nvim',
 		requires = { { 'nvim-lua/plenary.nvim' } }
 	}
 	-- Themes
@@ -80,7 +79,7 @@ return require('packer').startup(function(use)
 	use('christoomey/vim-system-copy')
 	use('vim-scripts/argtextobj.vim')
 	use('norcalli/nvim-terminal.lua')
-	use({'j-hui/fidget.nvim', tag='legacy'})
+	use({'j-hui/fidget.nvim'})
 	use('neomake/neomake')
 	-- tests
 	use {
