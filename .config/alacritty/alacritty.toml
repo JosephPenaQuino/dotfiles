@@ -1,4 +1,4 @@
-import = ["~/.config/alacritty/themes/alacritty-theme/themes/gruvbox_material.toml"]
+import = ["~/.config/alacritty/themes/alacritty-theme/themes/smoooooth.toml"]
 
 [[keyboard.bindings]]
 action = "SpawnNewInstance"
