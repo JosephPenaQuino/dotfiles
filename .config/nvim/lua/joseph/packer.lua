@@ -19,9 +19,6 @@ return require('packer').startup(function(use)
 	})
 	use({
 		'folke/tokyonight.nvim',
-		config = function()
-			vim.cmd('colorscheme tokyonight')
-		end
 	})
 	use({
 		"ellisonleao/gruvbox.nvim"
