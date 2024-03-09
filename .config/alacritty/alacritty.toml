@@ -1,0 +1,65 @@
+import = ["~/.config/alacritty/themes/alacritty-theme/themes/gruvbox_material.toml"]
+
+[[keyboard.bindings]]
+action = "SpawnNewInstance"
+key = "Return"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+chars = "\u0002v"
+key = "T"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+chars = "\u0002x"
+key = "W"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+chars = "\u0002c"
+key = "N"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+chars = "\u0002k"
+key = "K"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u0002j"
+key = "J"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u0002t"
+key = "J"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+chars = "\u0002n"
+key = "Tab"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u0002p"
+key = "Tab"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+chars = """
+\u0001:clear
+"""
+key = "L"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "P"
+mode = "Vi"
+
+[shell]
+args = ["-l", "-c", "tmux attach || tmux"]
+program = "/bin/zsh"
+
+[window]
+opacity = 0.999
