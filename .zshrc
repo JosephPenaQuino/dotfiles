@@ -9,7 +9,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/joseph/.oh-my-zsh"
+export ZSH="${HOME}/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -133,14 +133,14 @@ export PATH="$PATH:/opt/cross-gcc-8.3.0-pi_3+/cross-pi-gcc-8.3.0-2/bin"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/joseph/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup=$("${HOME}/anaconda3/bin/conda" 'shell.zsh' 'hook' 2> /dev/null)
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/joseph/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/joseph/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "${HOME}/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "${HOME}/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/joseph/anaconda3/bin:$PATH"
+        export PATH="${HOME}/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
@@ -153,7 +153,7 @@ alias vg_mem='valgrind --leak-check=full -v --track-origins=yes'
 tabs 4
 
 # Git
-alias config='/usr/bin/git --git-dir=/home/joseph/.cfg/ --work-tree=/home/joseph'
+alias config="/usr/bin/git --git-dir=${HOME}/.cfg/ --work-tree=${HOME}"
 
 # ESP
 # alias get_idf='. $HOME/esp/esp-idf/export.sh'
@@ -189,14 +189,6 @@ fpath+=${ZDOTDIR:-~}/.zsh_functions
 alias cmakegdb='cmake -DCMAKE_BUILD_TYPE=Debug ..'
 alias cmakeclang='cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1 ..'
 alias cmakesanitizer='cmake .. -DCMAKE_CXX_FLAGS="-fsanitize=address  -fsanitize=leak -g" -DCMAKE_C_FLAGS="-fsanitize=address  -fsanitize=leak -g" -DCMAKE_EXE_LINKER_FLAGS="-fsanitize=address  -fsanitize=leak" -DCMAKE_MODULE_LINKER_FLAGS="-fsanitize=address  -fsanitize=leak"'
-alias vimconfig=\
-"nvim /home/joseph/.vim/init/plug.vimrc "\
-"/home/joseph/.vim/init/leader.vimrc "\
-"/home/joseph/.vim/init/general.vimrc "\
-"/home/joseph/.vim/init/plugins.vimrc "\
-"/home/joseph/.vim/init/functions.vimrc "\
-"/home/joseph/.vim/after/ftplugin/*"
-
 
 # Git shortchuts
 alias gitl='git log --graph --reflog'
@@ -216,7 +208,7 @@ alias t="tree -I 'venv|__pycache__|*.tar.gz|build*|*.npy'"
 source $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/jre"
-export CNG_PATH="/home/joseph/tools/contiki-ng-43"
+export CNG_PATH="${HOME}/tools/contiki-ng-43"
 alias contiker="docker run --privileged --sysctl net.ipv6.conf.all.disable_ipv6=0 --mount type=bind,source=$CNG_PATH,destination=/home/user/contiki-ng -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v /dev/bus/usb:/dev/bus/usb -ti contiker/contiki-ng"
 ## cuda things
 #export LD_LIBRARY_PATH=/usr/lib/cuda/lib64:$LD_LIBRARY_PATH
