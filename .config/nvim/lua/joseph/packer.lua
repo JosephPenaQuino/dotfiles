@@ -111,4 +111,6 @@ return require('packer').startup(function(use)
 	}
 	-- used for gitemoji
 	use 'olacin/telescope-gitmoji.nvim'
+
+	use {'jose-elias-alvarez/null-ls.nvim'}
 end)
