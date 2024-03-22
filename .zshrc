@@ -168,7 +168,7 @@ alias get_cekeikon='source ~/cekeikon5/bin/ativa_cekcpu'
 
 # Copy current path to clipboard
 alias cpwd='pwd | xsel -i -b'
-source ~/.omni_env 2> /dev/null
+source ~/.work_env 2> /dev/null
 source ~/.personal_env 2> /dev/null
 
 # Install Ruby Gems to ~/gems'
@@ -205,7 +205,7 @@ alias git-sninppest='bat .oh-my-zsh/plugins/git/README.md'
 alias t="tree -I 'venv|__pycache__|*.tar.gz|build*|*.npy'"
 
 # zsh highlight
-source $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/jre"
 export CNG_PATH="${HOME}/tools/contiki-ng-43"
