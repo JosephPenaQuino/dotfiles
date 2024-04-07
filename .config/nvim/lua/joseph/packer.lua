@@ -20,6 +20,8 @@ return require('packer').startup(function(use)
 	use({
 		'folke/tokyonight.nvim',
 	})
+	use("oxfist/night-owl.nvim")
+	use("scottmckendry/cyberdream.nvim")
 	use({
 		"ellisonleao/gruvbox.nvim"
 	})
