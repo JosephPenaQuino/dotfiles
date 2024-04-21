@@ -115,4 +115,13 @@ return require('packer').startup(function(use)
 	use 'olacin/telescope-gitmoji.nvim'
 
 	use {'jose-elias-alvarez/null-ls.nvim'}
+
+	-- flutter
+	use {
+		'akinsho/flutter-tools.nvim',
+		requires = {
+			'nvim-lua/plenary.nvim',
+			'stevearc/dressing.nvim', -- optional for vim.ui.select
+    },
+}
 end)

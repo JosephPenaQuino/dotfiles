@@ -116,6 +116,7 @@ fi
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
+GOTO_PATHS=""
 alias zshconfig="nvim ~/.zshrc"
 alias zshsource="source ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -246,3 +247,7 @@ eval "$(pyenv init --path)"
 export PATH="$PATH:$HOME/.tmux/plugins/tmuxifier/bin"
 alias tm='tmuxifier'
 alias android="/opt/android-studio/bin/studio.sh"
+
+# flutter
+export PATH="$PATH:$HOME/Programs/flutter/bin"
+export PATH="$PATH":"$HOME/.pub-cache/bin"
