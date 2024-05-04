@@ -35,7 +35,8 @@ Execute the commands below:
 mkdir -p ~/programs
 mkdir -p ~/projects
 ```
-### Installation
+
+### Installing Packages
 
 #### Alacritty
 
