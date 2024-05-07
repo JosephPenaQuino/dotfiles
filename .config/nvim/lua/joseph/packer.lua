@@ -50,7 +50,7 @@ return require('packer').startup(function(use)
 	}
 
 	use 'lukas-reineke/indent-blankline.nvim' -- Indent guides
-	use 'tpope/vim-sleuth'                 -- Automatically set indent settings
+	use 'tpope/vim-sleuth'             -- Automatically set indent settings
 
 	use {
 		'VonHeikemen/lsp-zero.nvim',
@@ -78,7 +78,7 @@ return require('packer').startup(function(use)
 	use('christoomey/vim-system-copy')
 	use('vim-scripts/argtextobj.vim')
 	use('norcalli/nvim-terminal.lua')
-	use({'j-hui/fidget.nvim'})
+	use({ 'j-hui/fidget.nvim' })
 	use('neomake/neomake')
 	-- tests
 	use {
@@ -106,7 +106,7 @@ return require('packer').startup(function(use)
 	use("nvim-telescope/telescope-dap.nvim")
 	use("mfussenegger/nvim-dap-python")
 	-- misc
-	use {  -- execute some things
+	use { -- execute some things
 		'stevearc/overseer.nvim',
 		config = function() require('overseer').setup() end
 	}
@@ -119,7 +119,7 @@ return require('packer').startup(function(use)
 	-- used for gitemoji
 	use 'olacin/telescope-gitmoji.nvim'
 
-	use {'jose-elias-alvarez/null-ls.nvim'}
+	use { 'jose-elias-alvarez/null-ls.nvim' }
 
 	-- flutter
 	use {
@@ -127,6 +127,7 @@ return require('packer').startup(function(use)
 		requires = {
 			'nvim-lua/plenary.nvim',
 			'stevearc/dressing.nvim', -- optional for vim.ui.select
-    },
-}
+		},
+		use { 'Vigemus/iron.nvim' }
+	}
 end)
