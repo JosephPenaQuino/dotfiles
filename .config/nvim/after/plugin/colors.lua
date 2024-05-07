@@ -7,4 +7,4 @@ function ColorMyPencils(color)
 
 end
 
-ColorMyPencils('rose-pine-main')
+ColorMyPencils('cyberdream')

@@ -20,6 +20,8 @@ return require('packer').startup(function(use)
 	use({
 		'folke/tokyonight.nvim',
 	})
+	use("oxfist/night-owl.nvim")
+	use("scottmckendry/cyberdream.nvim")
 	use({
 		"ellisonleao/gruvbox.nvim"
 	})
@@ -118,4 +120,13 @@ return require('packer').startup(function(use)
 	use 'olacin/telescope-gitmoji.nvim'
 
 	use {'jose-elias-alvarez/null-ls.nvim'}
+
+	-- flutter
+	use {
+		'akinsho/flutter-tools.nvim',
+		requires = {
+			'nvim-lua/plenary.nvim',
+			'stevearc/dressing.nvim', -- optional for vim.ui.select
+    },
+}
 end)
