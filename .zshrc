@@ -253,3 +253,15 @@ alias android="/opt/android-studio/bin/studio.sh"
 # flutter
 export PATH="$PATH:/usr/local/bin/flutter/bin"
 export PATH="$PATH":"$HOME/.pub-cache/bin"
+
+alias bpytop="bpytop -lc"
+
+# -- START ACTIVESTATE INSTALLATION
+export PATH="$HOME/.local/ActiveState/StateTool/release/bin:$PATH"
+# -- STOP ACTIVESTATE INSTALLATION
+# -- START ACTIVESTATE DEFAULT RUNTIME ENVIRONMENT
+export PATH="$HOME/.cache/activestate/bin:$PATH"
+if [[ ! -z "$ACTIVESTATE_ACTIVATED" && -f "$ACTIVESTATE_ACTIVATED/activestate.yaml" ]]; then
+  echo "State Tool is operating on project $ACTIVESTATE_ACTIVATED_NAMESPACE, located at $ACTIVESTATE_ACTIVATED"
+fi
+# -- STOP ACTIVESTATE DEFAULT RUNTIME ENVIRONMENT
