@@ -22,7 +22,7 @@ vim.keymap.set("n", "<leader>de", dap.step_out)
 vim.keymap.set("n", "<leader>di", dap.step_into)
 vim.keymap.set("n", "<leader>do", dap.step_over)
 vim.keymap.set("n", "<leader>dr", dap.repl.open)
-vim.keymap.set("n", "<leader>ds", dap.stop)
+vim.keymap.set("n", "<leader>ds", dap.close)
 
 
 -- set some custom styles for the debugger
@@ -66,7 +66,9 @@ end
 dap.listeners.before.event_exited["dapui_config"] = function()
 	dapui.close()
 end
+require('dap.ext.vscode').load_launchjs(nil, {debugpy={'python'}})
 
 local dap_python = require('dap-python')
-dap_python.setup("/usr/bin/python3.11")
+dap_python.setup("python")
 dap_python.test_runner = 'pytest'
+

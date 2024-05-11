@@ -51,7 +51,7 @@ return require('packer').startup(function(use)
 	}
 
 	use 'lukas-reineke/indent-blankline.nvim' -- Indent guides
-	use 'tpope/vim-sleuth'                 -- Automatically set indent settings
+	use 'tpope/vim-sleuth'             -- Automatically set indent settings
 
 	use {
 		'VonHeikemen/lsp-zero.nvim',
@@ -100,7 +100,7 @@ return require('packer').startup(function(use)
 	use({
 		"rcarriga/nvim-dap-ui",
 		requires = {
-			"nvim-neotest/nvim-nio"
+			"nvim-neotest/nvim-nio",
 		}
 	})
 	use("theHamsta/nvim-dap-virtual-text")

@@ -212,11 +212,10 @@ source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/jre"
 export CNG_PATH="${HOME}/tools/contiki-ng-43"
 alias contiker="docker run --privileged --sysctl net.ipv6.conf.all.disable_ipv6=0 --mount type=bind,source=$CNG_PATH,destination=/home/user/contiki-ng -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v /dev/bus/usb:/dev/bus/usb -ti contiker/contiki-ng"
-## cuda
-export LD_LIBRARY_PATH=/usr/lib/cuda/lib64:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=/usr/lib/cuda/include:$LD_LIBRARY_PATH
-export TF_CPP_MIN_LOG_LEVEL='3'
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/usr/local/cuda/include/:$LD_LIBRARY_PATH
 export PATH="$PATH:/usr/local/cuda/bin"
+export TF_CPP_MIN_LOG_LEVEL='3'
 #alias enable_ml=\
 #'conda activate ml; '\
 #'echo $CONDA_PREFIX; '\
@@ -249,12 +248,11 @@ eval "$(pyenv init -)"
 export PATH="$PATH:$HOME/.tmux/plugins/tmuxifier/bin"
 alias tm='tmuxifier'
 alias android="/opt/android-studio/bin/studio.sh"
+alias bpytop='bpytop -lc'
 
 # flutter
 export PATH="$PATH:/usr/local/bin/flutter/bin"
 export PATH="$PATH":"$HOME/.pub-cache/bin"
-
-alias bpytop="bpytop -lc"
 
 # -- START ACTIVESTATE INSTALLATION
 export PATH="$HOME/.local/ActiveState/StateTool/release/bin:$PATH"
