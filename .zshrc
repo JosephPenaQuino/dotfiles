@@ -251,5 +251,5 @@ alias tm='tmuxifier'
 alias android="/opt/android-studio/bin/studio.sh"
 
 # flutter
-export PATH="$PATH:$HOME/Programs/flutter/bin"
+export PATH="$PATH:/usr/local/bin/flutter/bin"
 export PATH="$PATH":"$HOME/.pub-cache/bin"
