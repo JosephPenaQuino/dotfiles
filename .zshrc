@@ -168,7 +168,7 @@ alias get_idf_5='. $HOME/tools/esp-idf-release-v5.0/export.sh'
 alias get_cekeikon='source ~/cekeikon5/bin/ativa_cekcpu'
 
 # Copy current path to clipboard
-alias cpwd='pwd | xsel -i -b'
+alias cpwd='pwd | xclip -selection clipboard'
 source ~/.work_env 2> /dev/null
 source ~/.personal_env 2> /dev/null
 
