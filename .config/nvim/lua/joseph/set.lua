@@ -36,3 +36,5 @@ vim.opt.colorcolumn = "80"
 -- vim.opt.wrap = true
 
 vim.g.mapleader = "\\"
+
+vim.g.python3_host_prog = os.getenv("HOME") .. "/.pyenv/versions/nvim-venv/bin/python"
