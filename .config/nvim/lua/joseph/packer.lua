@@ -25,6 +25,7 @@ return require('packer').startup(function(use)
 	use({
 		"ellisonleao/gruvbox.nvim"
 	})
+	use 'navarasu/onedark.nvim'
 
 	use( -- Highlight, edit, and navigate code
 		'nvim-treesitter/nvim-treesitter',
@@ -128,6 +129,11 @@ return require('packer').startup(function(use)
 			'nvim-lua/plenary.nvim',
 			'stevearc/dressing.nvim', -- optional for vim.ui.select
 		},
-		use { 'Vigemus/iron.nvim' }
 	}
+
+	-- latex packages
+	use 'lervag/vimtex'
+
+	-- python repl
+	use 'Vigemus/iron.nvim'
 end)

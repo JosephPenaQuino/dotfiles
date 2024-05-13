@@ -168,7 +168,7 @@ alias get_idf_5='. $HOME/tools/esp-idf-release-v5.0/export.sh'
 alias get_cekeikon='source ~/cekeikon5/bin/ativa_cekcpu'
 
 # Copy current path to clipboard
-alias cpwd='pwd | xsel -i -b'
+alias cpwd='pwd | xclip -selection clipboard'
 source ~/.work_env 2> /dev/null
 source ~/.personal_env 2> /dev/null
 
@@ -180,6 +180,7 @@ export PATH="$HOME/gems/bin:$PATH"
 alias genEspIdfYcm='~/.vim/bundle/YCM-Generator/config_gen.py -c $(which xtensa-esp32-elf-gcc) --verbose --preserve-environment .'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # export FZF_DEFAULT_OPS="--extended"
 export FZF_DEFAULT_COMMAND="fd --hidden"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
@@ -211,9 +212,9 @@ source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/jre"
 export CNG_PATH="${HOME}/tools/contiki-ng-43"
 alias contiker="docker run --privileged --sysctl net.ipv6.conf.all.disable_ipv6=0 --mount type=bind,source=$CNG_PATH,destination=/home/user/contiki-ng -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v /dev/bus/usb:/dev/bus/usb -ti contiker/contiki-ng"
-## cuda things
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=/usr/local/cuda/include/:$LD_LIBRARY_PATH
+export PATH="$PATH:/usr/local/cuda/bin"
 export TF_CPP_MIN_LOG_LEVEL='3'
 #alias enable_ml=\
 #'conda activate ml; '\
@@ -221,9 +222,9 @@ export TF_CPP_MIN_LOG_LEVEL='3'
 #'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/; '\
 #'export TF_CPP_MIN_LOG_LEVEL="3"'
 
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+ export NVM_DIR="$HOME/.nvm"
+ [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+ [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox,.venv,.mypy_cache,.pytest_cache,.cache,.eggs,build,dist,node_modules,__pycache__,venv}'
 source ~/.config/zfunc/lazy-nvm.sh
 
@@ -253,5 +254,15 @@ alias android="/opt/android-studio/bin/studio.sh"
 alias bpytop='bpytop -lc'
 
 # flutter
-export PATH="$PATH:$HOME/Programs/flutter/bin"
+export PATH="$PATH:/usr/local/bin/flutter/bin"
 export PATH="$PATH":"$HOME/.pub-cache/bin"
+
+# -- START ACTIVESTATE INSTALLATION
+export PATH="$HOME/.local/ActiveState/StateTool/release/bin:$PATH"
+# -- STOP ACTIVESTATE INSTALLATION
+# -- START ACTIVESTATE DEFAULT RUNTIME ENVIRONMENT
+export PATH="$HOME/.cache/activestate/bin:$PATH"
+if [[ ! -z "$ACTIVESTATE_ACTIVATED" && -f "$ACTIVESTATE_ACTIVATED/activestate.yaml" ]]; then
+  echo "State Tool is operating on project $ACTIVESTATE_ACTIVATED_NAMESPACE, located at $ACTIVESTATE_ACTIVATED"
+fi
+# -- STOP ACTIVESTATE DEFAULT RUNTIME ENVIRONMENT

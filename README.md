@@ -8,7 +8,8 @@ Execute this command in order to execute dependencies:
 
 ```bash
 sudo apt update
-sudo apt install -y tmux git curl zsh zsh-syntax-highlighting xclip
+sudo apt install -y tmux git curl zsh zsh-syntax-highlighting xclip ripgrep
+
 ```
 
 Initialize git for dotfiles following the procedure from [Atlassian](https://www.atlassian.com/git/tutorials/dotfiles):
@@ -35,7 +36,8 @@ Execute the commands below:
 mkdir -p ~/programs
 mkdir -p ~/projects
 ```
-### Installation
+
+### Installing Packages
 
 #### Alacritty
 
@@ -52,6 +54,11 @@ sudo update-alternatives --config x-terminal-emulator
 #### Pyenv
 
 Follow the steps to install pyenv from [repository](https://github.com/pyenv/pyenv?tab=readme-ov-file#installation)
+
+```bash
+pyenv global 3.12
+```
+
 
 #### Oh-my-zsh
 
@@ -91,6 +98,36 @@ Execute <C-b><S-i> to install the plugins.
 In order to use the zsh fuzzy finder, you must clone their [repository](https://github.com/junegunn/fzf).
 Rembember, install fzf from the repository instead of using the apt source.
 the repository version is higher than the apt source.
+
+## Grammarly
+
+From https://hanspinckaers.com/use-grammarly-premium-with-grammarly-lsp-in-neovim/
+
+Basically, I needed to login via VSCode, then I got it working.
+
+1. Download / install VSCode (the horror..)
+2. Install the extension Grammarly
+3. Shift-Command-p --> grammarly.login
+4. Follow the login flow
+5. Quit VSCode
+6. Check ls ~/.config/grammarly-languageserver
+7. Copy the folder name, this is your clientID
+8. Configure the LSP like this:
+
+```
+require'lspconfig'.grammarly.setup{
+     on_attach = on_attach,
+     init_options = { clientId = "<>" }
+}
+```
+
+Getting TypeError: Failed to parse URL ? You may need to run using node v16.40:
+
+- Install nvm (https://github.com/nvm-sh/nvm / https://github.com/jorgebucaran/nvm.fish)
+- nvm install v16.14.0
+- nvm use 16
+- nvim
+
 
 ## Usage
 
