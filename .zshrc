@@ -240,9 +240,12 @@ export PATH="$HOME/gems/bin:$PATH"
 alias gcg="git config --edit --global"
 alias gcl="git config --edit --local"
 
+# Pyenv
 export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 export PATH="$PATH:$HOME/.tmux/plugins/tmuxifier/bin"
 alias tm='tmuxifier'
