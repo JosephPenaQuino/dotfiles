@@ -266,3 +266,9 @@ if [[ ! -z "$ACTIVESTATE_ACTIVATED" && -f "$ACTIVESTATE_ACTIVATED/activestate.ya
   echo "State Tool is operating on project $ACTIVESTATE_ACTIVATED_NAMESPACE, located at $ACTIVESTATE_ACTIVATED"
 fi
 # -- STOP ACTIVESTATE DEFAULT RUNTIME ENVIRONMENT
+
+# enable undercurl
+export KONSOLE_VERSION="230804"
+
+# Rust
+. "$HOME/.cargo/env"
