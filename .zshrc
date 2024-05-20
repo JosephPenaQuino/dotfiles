@@ -272,3 +272,7 @@ export KONSOLE_VERSION="230804"
 
 # Rust
 . "$HOME/.cargo/env"
+
+# Vale
+export VALE_CONFIG_PATH="$HOME/.config/vale/.vale.ini"
+export VALE_STYLES_PATH="$HOME/.config/vale/styles"
