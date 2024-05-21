@@ -8,7 +8,7 @@ Execute this command in order to execute dependencies:
 
 ```bash
 sudo apt update
-sudo apt install -y tmux git curl zsh zsh-syntax-highlighting xclip ripgrep
+sudo apt install -y tmux git curl zsh zsh-syntax-highlighting xclip ripgrep libfuse2
 
 ```
 
@@ -26,6 +26,9 @@ Then link the dotfiles git to this repository:
 ```
 source ~/.bashrc
 config remote  add origin https://github.com/JosephPenaQuino/dotfiles.git
+config checkout master
+config branch --set-upstream-to=origin/master master
+config pull
 ```
 
 ### Directory structure
@@ -38,6 +41,43 @@ mkdir -p ~/projects
 ```
 
 ### Installing Packages
+
+#### NVM
+
+https://github.com/nvm-sh/nvm?tab=readme-ov-file#git-install
+
+Then check in https://nodejs.org/en and install the latest version
+
+```bash
+nvm install vX.Y.Z
+```
+
+#### Neovim
+
+Based on [neovim's repository](https://github.com/neovim/neovim/releases):
+
+```bash
+cd ~/programs
+wget https://github.com/neovim/neovim/releases/download/v0.10.0/nvim.appimage
+chmod u+x nvim.appimage
+sudo ln -s $HOME/programs/nvim.appimage /usr/local/bin/nvim
+sudo ln -s $HOME/programs/nvim.appimage /usr/local/bin/v
+```
+
+Based on [packer's repisotory](https://github.com/wbthomason/packer.nvim?tab=readme-ov-file#quickstart)
+
+```bash
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+```
+
+Then, open neovim and run:
+```
+:PackerInstall
+```
+
+Finally, restart neovim.
+
 
 #### Alacritty
 
@@ -56,6 +96,9 @@ sudo update-alternatives --config x-terminal-emulator
 Follow the steps to install pyenv from [repository](https://github.com/pyenv/pyenv?tab=readme-ov-file#installation)
 
 ```bash
+sudo apt install -y python3-notcurses libffi-dev libreadline-dev libssl-dev libsqlite3-dev python3-tk tk-dev lzma liblzma-dev libbz2-dev
+
+pyenv install 3.12
 pyenv global 3.12
 ```
 
@@ -67,21 +110,6 @@ Follow the steps to install oh-my-zsh from [repository](https://ohmyz.sh/#instal
 - https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
 - https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh
 - https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#oh-my-zsh
-
-#### Neovim
-
-- https://github.com/neovim/neovim/releases
-- https://github.com/wbthomason/packer.nvim?tab=readme-ov-file#quickstart
-
-#### NVM
-
-https://github.com/nvm-sh/nvm?tab=readme-ov-file#git-install
-
-Then check in https://nodejs.org/en and install the latest version
-
-```bash
-nvm install vX.Y.Z
-```
 
 #### TMUX
 
@@ -98,37 +126,5 @@ Execute <C-b><S-i> to install the plugins.
 In order to use the zsh fuzzy finder, you must clone their [repository](https://github.com/junegunn/fzf).
 Rembember, install fzf from the repository instead of using the apt source.
 the repository version is higher than the apt source.
-
-## Grammarly
-
-From https://hanspinckaers.com/use-grammarly-premium-with-grammarly-lsp-in-neovim/
-
-Basically, I needed to login via VSCode, then I got it working.
-
-1. Download / install VSCode (the horror..)
-2. Install the extension Grammarly
-3. Shift-Command-p --> grammarly.login
-4. Follow the login flow
-5. Quit VSCode
-6. Check ls ~/.config/grammarly-languageserver
-7. Copy the folder name, this is your clientID
-8. Configure the LSP like this:
-
-```
-require'lspconfig'.grammarly.setup{
-     on_attach = on_attach,
-     init_options = { clientId = "<>" }
-}
-```
-
-Getting TypeError: Failed to parse URL ? You may need to run using node v16.40:
-
-- Install nvm (https://github.com/nvm-sh/nvm / https://github.com/jorgebucaran/nvm.fish)
-- nvm install v16.14.0
-- nvm use 16
-- nvim
-
-
-## Usage
 
 ## Roadmap
