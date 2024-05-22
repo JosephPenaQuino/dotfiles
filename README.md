@@ -12,7 +12,7 @@ sudo apt install -y tmux git curl zsh zsh-syntax-highlighting xclip ripgrep libf
 
 ```
 
-Initialize git for dotfiles following the procedure from [Atlassian](https://www.atlassian.com/git/tutorials/dotfiles):
+Initialize git for Dotfiles following the procedure from [Atlassian](https://www.atlassian.com/git/tutorials/dotfiles):
 
 ```bash
 git init --bare $HOME/.cfg
@@ -21,7 +21,7 @@ config config --local status.showUntrackedFiles no
 echo "alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" >> $HOME/.bashrc
 ```
 
-Then link the dotfiles git to this repository:
+Then link the Dotfiles git to this repository:
 
 ```
 source ~/.bashrc
@@ -54,7 +54,7 @@ nvm install vX.Y.Z
 
 #### Neovim
 
-Based on [neovim's repository](https://github.com/neovim/neovim/releases):
+Based on [Neovim's repository](https://github.com/neovim/neovim/releases):
 
 ```bash
 cd ~/programs
@@ -64,24 +64,24 @@ sudo ln -s $HOME/programs/nvim.appimage /usr/local/bin/nvim
 sudo ln -s $HOME/programs/nvim.appimage /usr/local/bin/v
 ```
 
-Based on [packer's repisotory](https://github.com/wbthomason/packer.nvim?tab=readme-ov-file#quickstart)
+Based on [packer's repository](https://github.com/wbthomason/packer.nvim?tab=readme-ov-file#quickstart)
 
 ```bash
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 ```
 
-Then, open neovim and run:
+Then, open Neovim and run:
 ```
 :PackerInstall
 ```
 
-Finally, restart neovim.
+Finally, restart Neovim.
 
 
 #### Alacritty
 
-Follow the steps to install alacritty from [repository](https://github.com/alacritty/alacritty/blob/master/INSTALL.md),
+Follow the steps to install Alacritty from [repository](https://github.com/alacritty/alacritty/blob/master/INSTALL.md),
 but clone the repository in `~/programs`
 
 ```bash
@@ -91,9 +91,9 @@ sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emula
 sudo update-alternatives --config x-terminal-emulator
 ```
 
-#### Pyenv
+#### PYENV
 
-Follow the steps to install pyenv from [repository](https://github.com/pyenv/pyenv?tab=readme-ov-file#installation)
+Follow the steps to install PYENV from [repository](https://github.com/pyenv/pyenv?tab=readme-ov-file#installation)
 
 ```bash
 sudo apt install -y python3-notcurses libffi-dev libreadline-dev libssl-dev libsqlite3-dev python3-tk tk-dev lzma liblzma-dev libbz2-dev
@@ -121,8 +121,8 @@ Follow the steps to install oh-my-zsh from [repository](https://ohmyz.sh/#instal
 
 #### TMUX
 
-This section is based on the [tmux plugin manager repository](https://github.com/tmux-plugins/tpm).
-Go to the tmux file:
+This section is based on the [TMUX plugin manager repository](https://github.com/tmux-plugins/tpm).
+Go to the TMUX file:
 
 ```
 v ~/.tmux.conf
@@ -131,19 +131,28 @@ v ~/.tmux.conf
 Execute <C-b><S-i> to install the plugins.
 
 #### Fuzzy finder
-In order to use the zsh fuzzy finder, you must clone their [repository](https://github.com/junegunn/fzf).
-Rembember, install fzf from the repository instead of using the apt source.
+In order to use the `zsh` fuzzy finder, you must clone their [repository](https://github.com/junegunn/fzf).
+Remember, install `fzf` from the repository instead of using the apt source.
 the repository version is higher than the apt source.
 
 
 #### Latex
 
-Intall perl and full-texlive
+Install Perl and full-texlive
 
 ```bash
 sudo apt install -y perl texlive-full
+cargo install tree-sitter-cli # for nvim-treesitter with vimtex
 ```
 
 Then, follow latexmk's [repository](https://www.cantab.net/users/johncollins/latexmk/index.html) to install it.
+
+### Vale
+
+From [Vale's documentation](https://vale.sh/docs/vale-cli/installation/):
+
+```bash
+sudo snap install vale
+```
 
 ## Roadmap
