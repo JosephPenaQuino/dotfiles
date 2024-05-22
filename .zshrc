@@ -243,10 +243,8 @@ alias gcl="git config --edit --local"
 
 # Pyenv
 export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
 
 export PATH="$PATH:$HOME/.tmux/plugins/tmuxifier/bin"
 alias tm='tmuxifier'
@@ -276,3 +274,7 @@ export KONSOLE_VERSION="230804"
 # Vale
 export VALE_CONFIG_PATH="$HOME/.config/vale/.vale.ini"
 export VALE_STYLES_PATH="$HOME/.config/vale/styles"
+
+alias chrome="google-chrome"
+
+alias get_size="du -sh $(ls -A) | sort -h | tac | head"
