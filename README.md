@@ -102,6 +102,14 @@ pyenv install 3.12
 pyenv global 3.12
 ```
 
+#### Poetry
+
+From [Poetry's documentation](https://python-poetry.org/docs/#installing-with-the-official-installer):
+
+```
+curl -sSL https://install.python-poetry.org | python -
+```
+
 
 #### Oh-my-zsh
 
@@ -126,5 +134,16 @@ Execute <C-b><S-i> to install the plugins.
 In order to use the zsh fuzzy finder, you must clone their [repository](https://github.com/junegunn/fzf).
 Rembember, install fzf from the repository instead of using the apt source.
 the repository version is higher than the apt source.
+
+
+#### Latex
+
+Intall perl and full-texlive
+
+```bash
+sudo apt install -y perl texlive-full
+```
+
+Then, follow latexmk's [repository](https://www.cantab.net/users/johncollins/latexmk/index.html) to install it.
 
 ## Roadmap
