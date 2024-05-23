@@ -110,26 +110,16 @@ fi
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
 GOTO_PATHS=""
-alias zshconfig="nvim ~/.zshrc"
-alias zshsource="source ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-alias lss="ls -lhtr"
 
-# Created by `userpath` on 2021-01-25 16:13:40
 export PATH="$PATH:$HOME/bin"
 export PATH="$PATH:$HOME/.local/bin"
+
+# ARM
 export PATH="$PATH:$HOME/Programs/gcc-arm-none-eabi-9-2020-q2-update/bin"
 export PATH="$PATH:$HOME/Programs/gcc-arm-10.2-2020.11-x86_64-arm-none-linux-gnueabihf/bin"
 export PATH="$PATH:$HOME/STM32MPU_workspace/STM32MPU-Tools/STM32CubeProgrammer-x.y.z/bin"
 export PATH="$PATH:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin"
-# Enable arm-linux-gnueabihf 8.3
 export PATH="$PATH:/opt/cross-gcc-8.3.0-pi_3+/cross-pi-gcc-8.3.0-2/bin"
 
 # >>> conda initialize >>>
@@ -156,14 +146,6 @@ tabs 4
 # Git
 alias config="/usr/bin/git --git-dir=${HOME}/.cfg/ --work-tree=${HOME}"
 
-# ESP
-# alias get_idf='. $HOME/esp/esp-idf/export.sh'
-# IDF_PATH="$HOME/esp/esp-idf"
-alias get_idf='. $HOME/tools/esp-idf-v4.4/export.sh'
-# IDF_PATH="$HOME/tools/esp-idf-v4.4"
-alias get_idf_5='. $HOME/tools/esp-idf-release-v5.0/export.sh'
-# IDF_PATH="$HOME/tools/esp-idf-v4.4"
-
 # Cekeikon
 alias get_cekeikon='source ~/cekeikon5/bin/ativa_cekcpu'
 
@@ -172,11 +154,9 @@ alias cpwd='pwd | xclip -selection clipboard'
 source ~/.work_env 2> /dev/null
 source ~/.personal_env 2> /dev/null
 
-# Install Ruby Gems to ~/gems'
-export GEM_HOME="$HOME/gems"
-export PATH="$HOME/gems/bin:$PATH"
-
-# Vim
+# ESP32
+alias get_idf='. $HOME/tools/esp-idf-v4.4/export.sh'
+alias get_idf_5='. $HOME/tools/esp-idf-release-v5.0/export.sh'
 alias genEspIdfYcm='~/.vim/bundle/YCM-Generator/config_gen.py -c $(which xtensa-esp32-elf-gcc) --verbose --preserve-environment .'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -209,20 +189,21 @@ alias t="tree -I 'venv|__pycache__|*.tar.gz|build*|*.npy'"
 # zsh highlight
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# Java
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/jre"
+
+# Contiki
 export CNG_PATH="${HOME}/tools/contiki-ng-43"
 alias contiker="docker run --privileged --sysctl net.ipv6.conf.all.disable_ipv6=0 --mount type=bind,source=$CNG_PATH,destination=/home/user/contiki-ng -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v /dev/bus/usb:/dev/bus/usb -ti contiker/contiki-ng"
-export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=/usr/local/cuda/include/:$LD_LIBRARY_PATH
-export PATH="$PATH:/usr/local/cuda/bin"
-export TF_CPP_MIN_LOG_LEVEL='3'
-#alias enable_ml=\
-#'conda activate ml; '\
-#'echo $CONDA_PREFIX; '\
-#'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/; '\
-#'export TF_CPP_MIN_LOG_LEVEL="3"'
 
- export NVM_DIR="$HOME/.nvm"
+# cuda
+# export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
+# export LD_LIBRARY_PATH="/usr/local/cuda/include/:$LD_LIBRARY_PATH"
+# export PATH="$PATH:/usr/local/cuda/bin"
+export TF_CPP_MIN_LOG_LEVEL='3'
+
+# Node Version Manager
+export NVM_DIR="$HOME/.nvm"
  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox,.venv,.mypy_cache,.pytest_cache,.cache,.eggs,build,dist,node_modules,__pycache__,venv}'
@@ -235,9 +216,11 @@ alias decolor="sed $'s/\e\\[[0-9;:]*[a-zA-Z]//g' | sed 's/\r//g' | sed 's/\^\[\[
 alias pp='poetry run python'
 alias pt='poetry run pytest'
 alias ptd='poetry run pytest --log-cli-level=DEBUG'
-# Install Ruby Gems to ~/gems
+
+# Ruby Gems
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
+
 alias gcg="git config --edit --global"
 alias gcl="git config --edit --local"
 
@@ -275,6 +258,9 @@ export KONSOLE_VERSION="230804"
 export VALE_CONFIG_PATH="$HOME/.config/vale/.vale.ini"
 export VALE_STYLES_PATH="$HOME/.config/vale/styles"
 
+# Misc
 alias chrome="google-chrome"
-
 alias get_size="du -sh $(ls -A) | sort -h | tac | head"
+alias zshconfig="nvim ~/.zshrc"
+alias zshsource="source ~/.zshrc"
+alias lss="ls -lhtr"
