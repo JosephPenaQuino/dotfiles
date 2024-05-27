@@ -2,3 +2,6 @@ XGBoost
 
 Slurm
 MLflow
+Chebyshev
+downsampled
+softmax
