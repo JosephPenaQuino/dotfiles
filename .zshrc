@@ -190,7 +190,9 @@ alias t="tree -I 'venv|__pycache__|*.tar.gz|build*|*.npy'"
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Java
-export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/jre"
+# export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/jre"
+# export JAVA_HOME="/usr/lib/jvm/default-java/"
+export JAVA_HOME="/usr/lib/java/jdk-17"
 
 # Contiki
 export CNG_PATH="${HOME}/tools/contiki-ng-43"
@@ -233,7 +235,9 @@ alias tm='tmuxifier'
 
 # android
 alias android="/opt/android-studio/bin/studio.sh"
-export PATH="$PATH:$HOME/Android/Sdk/emulator"
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH="$PATH:$ANDROID_HOME/emulator"
+export PATH="$PATH:$ANDROID_HOME/platform-tools"
 
 alias bpytop='bpytop -lc'
 
