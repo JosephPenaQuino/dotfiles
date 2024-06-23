@@ -9,3 +9,4 @@ vim.keymap.set({"i", "s"}, "<C-E>", function()
 		ls.change_choice(1)
 	end
 end, {silent = true})
+ls.filetype_extend("javascript", {"javascriptreact"})

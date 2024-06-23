@@ -6,6 +6,7 @@ local opts = {
 			extra_args = { '--python-executable', 'python' },
 		}),
 		null_ls.builtins.diagnostics.ruff,
+		null_ls.builtins.formatting.eslint_d,
 	}
 }
 null_ls.setup(opts)
