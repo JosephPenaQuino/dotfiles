@@ -51,7 +51,7 @@ return require('packer').startup(function(use)
 	}
 
 	use 'lukas-reineke/indent-blankline.nvim' -- Indent guides
-	use 'tpope/vim-sleuth'             -- Automatically set indent settings
+	use 'tpope/vim-sleuth'                 -- Automatically set indent settings
 
 	use {
 		'VonHeikemen/lsp-zero.nvim',
@@ -75,7 +75,12 @@ return require('packer').startup(function(use)
 		}
 	}
 	use("folke/zen-mode.nvim")
+
+	-- copilot
 	use('github/copilot.vim')
+	use {
+		"CopilotC-Nvim/CopilotChat.nvim",
+	}
 	use('christoomey/vim-system-copy')
 	use('vim-scripts/argtextobj.vim')
 	use('norcalli/nvim-terminal.lua')
