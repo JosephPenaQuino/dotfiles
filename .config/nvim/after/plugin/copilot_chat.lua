@@ -1,4 +1,7 @@
 require("CopilotChat").setup {
-  debug = true, -- Enable debugging
-  -- See Configuration section for rest
+  prompts = {
+    Pytest = {
+      prompt = '/COPILOT_GENERATE Please generate pytest tests for my code. Try to use parametrize if possible.',
+    },
+  }
 }
