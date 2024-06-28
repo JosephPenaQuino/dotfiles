@@ -1,4 +1,5 @@
 local lsp_zero = require('lsp-zero')
+local lspconfig = require('lspconfig')
 
 
 lsp_zero.on_attach(function(client, bufnr)
@@ -64,6 +65,13 @@ cmp.setup({
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.publishDiagnostics.tagSupport.valueSet = { 2 }
-require('lspconfig')["pyright"].setup({
+lspconfig["pyright"].setup({
   capabilities=capabilities,
+  settings={
+    python = {
+      analysis = {
+        diagnosticMode = "workspace",
+      }
+    }
+  }
 })
