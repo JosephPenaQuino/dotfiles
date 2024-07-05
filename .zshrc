@@ -215,7 +215,7 @@ fpath+=~/.config/zfunc
 autoload -Uz compinit && compinit
 alias decolor="sed $'s/\e\\[[0-9;:]*[a-zA-Z]//g' | sed 's/\r//g' | sed 's/\^\[\[0;31m//g' | sed 's/\^\[\[0;31m//g' | sed 's/\^\[\[0m//g' | sed 's/\^M\\$//g'"
 alias pp='poetry run python'
-alias pt='poetry run pytest'
+alias pt='poetry run pytest -vvx'
 alias ptd='poetry run pytest --log-cli-level=DEBUG'
 
 # Ruby Gems
