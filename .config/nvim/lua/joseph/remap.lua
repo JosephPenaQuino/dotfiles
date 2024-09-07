@@ -89,5 +89,5 @@ function TexSettings()
     -- vim.opt_local.wrapmargin = 0
     vim.opt.wrap = true  -- wrap lines
     vim.opt.linebreak = true  -- breaks by word rather than character
-    vim.opt.columns = 80
+    -- vim.opt.columns = 80
 end
