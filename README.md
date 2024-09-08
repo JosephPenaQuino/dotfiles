@@ -154,5 +154,3 @@ From [Vale's documentation](https://vale.sh/docs/vale-cli/installation/):
 ```bash
 sudo snap install vale
 ```
-
-## Roadmap
