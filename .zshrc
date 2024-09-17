@@ -271,3 +271,6 @@ alias get_size="du -sh $(ls -A) | sort -h | tac | head"
 alias zshconfig="nvim ~/.zshrc"
 alias zshsource="source ~/.zshrc"
 alias lss="ls -lhtr"
+
+# Github Copilot
+alias ghc="gh copilot suggest"
