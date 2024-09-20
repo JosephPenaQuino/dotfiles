@@ -83,7 +83,6 @@ return require('packer').startup(function(use)
 	}
 	use('christoomey/vim-system-copy')
 	use('vim-scripts/argtextobj.vim')
-	use('norcalli/nvim-terminal.lua')
 	use({ 'j-hui/fidget.nvim' })
 	use('neomake/neomake')
 	-- tests
