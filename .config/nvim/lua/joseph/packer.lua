@@ -2,6 +2,7 @@
 
 -- Only required if you have packer configured as `opt`
 vim.cmd.packadd('packer.nvim')
+vim.g.slime_no_mappings = 1
 
 return require('packer').startup(function(use)
 	-- Packer can manage itself
@@ -143,4 +144,7 @@ return require('packer').startup(function(use)
 
 	-- datascience
 	use 'jpalardy/vim-slime'
+
+	use 'preservim/vimux'
+	use 'julienr/vim-cellmode'
 end)
