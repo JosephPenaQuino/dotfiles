@@ -140,4 +140,7 @@ return require('packer').startup(function(use)
 
 	-- python repl
 	use 'Vigemus/iron.nvim'
+
+	-- datascience
+	use 'jpalardy/vim-slime'
 end)
