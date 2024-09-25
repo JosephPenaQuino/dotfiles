@@ -91,9 +91,3 @@ function TexSettings()
     vim.opt.linebreak = true  -- breaks by word rather than character
     -- vim.opt.columns = 80
 end
-
-
--- Function to move to the next cell (marked by # %%)
-vim.api.nvim_set_keymap('n', ']l', [[:lua vim.fn.search('# %%', 'W')<CR>]], { noremap = true, silent = true })
--- Function to move to the previous cell (marked by # %%)
-vim.api.nvim_set_keymap('n', '[l', [[:lua vim.fn.search('# %%', 'bW')<CR>]], { noremap = true, silent = true })
