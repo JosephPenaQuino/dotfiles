@@ -30,16 +30,20 @@ local function render_virtual_line()
 
     -- Loop through all lines in the buffer
     local total_lines = vim.api.nvim_buf_line_count(buf)
-    for i = 1, total_lines do
+    for i = 2, total_lines do  -- Start from the second line since we'll check the line above
         local line = vim.api.nvim_buf_get_lines(buf, i - 1, i, false)[1]
 
-        -- Check if the line starts with '# %%'
+        -- Check if the current line starts with '# %%'
         if line:match("^# %%") then
-            -- Add virtual text with a continuous line above the found line
-            vim.api.nvim_buf_set_extmark(buf, ns_id, i - 2, 0, {
-                virt_text = { { "───────────────────────────────────────────────────────────────────────────────", "Comment" } },  -- Styled as a comment
-                virt_text_pos = "overlay",
-            })
+            -- Check if the line above is empty
+            local line_above = vim.api.nvim_buf_get_lines(buf, i - 2, i - 1, false)[1]
+            if line_above:match("^%s*$") then  -- Line is empty or contains only whitespace
+                -- Add virtual text with a continuous line above the found line
+                vim.api.nvim_buf_set_extmark(buf, ns_id, i - 2, 0, {
+                    virt_text = { { "───────────────────────────────────────────────────────────────────────────────", "Comment" } },  -- Styled as a comment
+                    virt_text_pos = "overlay",
+                })
+            end
         end
     end
 end
