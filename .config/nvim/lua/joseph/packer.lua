@@ -41,6 +41,8 @@ return require('packer').startup(function(use)
 	use('theprimeagen/harpoon')
 	use('mbbill/undotree')
 
+
+	use('rhysd/git-messenger.vim')
 	use('lewis6991/gitsigns.nvim') -- Git signs
 	use('tpope/vim-fugitive')
 	use('tpope/vim-commentary')
