@@ -84,6 +84,7 @@ return require('packer').startup(function(use)
 	use {
 		"CopilotC-Nvim/CopilotChat.nvim",
 	}
+
 	use('christoomey/vim-system-copy')
 	use('vim-scripts/argtextobj.vim')
 	use({ 'j-hui/fidget.nvim' })
