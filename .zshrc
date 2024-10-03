@@ -276,4 +276,4 @@ alias lss="ls -lhtr"
 alias ghc="gh copilot suggest"
 
 # Obsidian
-alias obsidian="./obsidian --no-sandbox"
+alias obsidian="${HOME}/programs/obsidian/obsidian --no-sandbox"
