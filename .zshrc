@@ -274,3 +274,6 @@ alias lss="ls -lhtr"
 
 # Github Copilot
 alias ghc="gh copilot suggest"
+
+# Obsidian
+alias obsidian="./obsidian --no-sandbox"
