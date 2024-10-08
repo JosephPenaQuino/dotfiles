@@ -149,7 +149,6 @@ return require('packer').startup(function(use)
 	use 'jpalardy/vim-slime'
 
 	use 'preservim/vimux'
-	use 'julienr/vim-cellmode'
 
 	use {
 		'yetone/avante.nvim',
