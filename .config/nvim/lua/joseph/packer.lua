@@ -164,7 +164,6 @@ return require('packer').startup(function(use)
 		    {
 			'MeanderingProgrammer/render-markdown.nvim',
 			config = function()
-				require("avante_lib").load()
 			    require('render-markdown').setup({
 				file_types = { "markdown", "Avante" },
 			    })
