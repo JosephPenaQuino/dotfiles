@@ -91,3 +91,13 @@ function TexSettings()
     vim.opt.linebreak = true  -- breaks by word rather than character
     -- vim.opt.columns = 80
 end
+
+
+vim.keymap.set("n", "<leader>tc", function()
+  local git_root = vim.fn.system("git rev-parse --show-toplevel")
+  git_root = vim.fn.trim(git_root) -- Trim any trailing newline
+  local env_file = git_root .. "/.env"
+
+  -- Open the .env file
+  vim.cmd("edit " .. env_file)
+end)
