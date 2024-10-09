@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Code based on https://www.reddit.com/r/neovim/comments/sw1cc6/comment/hxjy597
+
+TGT_DIR="$HOME/.local/bin/"
+cd "$TGT_DIR"
+if test -f "$TGT_DIR/nvim.appimage"; then
+    mv nvim.appimage nvim.appimage.old
+fi
+
+wget https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage.sha256sum -q -O  nvim.appimage.sha256sum
+wget https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage -q -O nvim.appimage
+
+PROCEED="$(sha256sum -c nvim.appimage.sha256sum)"
+
+if [[ $PROCEED =~ "OK" ]]; then
+    echo "Update Successful: Checksum OK"
+    chmod u+x nvim.appimage
+    ln -sf "$TGT_DIR/nvim.appimage" "$TGT_DIR/nvim"
+    nvim_version=$(nvim --version | grep -oP 'NVIM v\K\S+')
+    notify-send "NeoVim updated to ${nvim_version}"
+else
+    echo "Checksum Failed: Rolling back"
+    notify-send "Checksum Failed: Rolling back"
+    rm nvim.appimage
+    mv nvim.appimage.old nvim.appimage
+fi
+
+if test -f "$TGT_DIR/nvim.appimage.old"; then
+    rm nvim.appimage.old
+fi
