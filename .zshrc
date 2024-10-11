@@ -277,3 +277,4 @@ alias ghc="gh copilot suggest"
 
 # Obsidian
 alias obsidian="${HOME}/programs/obsidian/obsidian --no-sandbox"
+alias cdn="cd $(mktemp -d)"
