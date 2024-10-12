@@ -1,14 +1,21 @@
-if vim.loop.fs_stat("/usr/local/bin/ollama") ~= nil then
+if vim.loop.fs_stat("/usr/local/bin/ollama") ~= nil and vim.env.NVIM_LLM ~= nil then
     require("avante_lib").load()
     require("avante").setup({
         provider = "ollama",
-        auto_suggestino_provider = "ollama",
+        auto_suggestions_provider = "ollama",
+          behaviour = {
+            auto_suggestions = true, -- Experimental stage
+            auto_set_highlight_group = true,
+            auto_set_keymaps = true,
+            auto_apply_diff_after_generation = false,
+            support_paste_from_clipboard = false,
+          },
         vendors = {
             ---@type AvanteProvider
             ollama = {
                 ["local"] = true,
                 endpoint = "127.0.0.1:11434/v1",
-                model = "codegemma",
+                model = vim.env.NVIM_LLM,
                 parse_curl_args = function(opts, code_opts)
                     return {
                         url = opts.endpoint .. "/chat/completions",
