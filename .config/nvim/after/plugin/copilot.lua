@@ -1,1 +1,0 @@
-vim.cmd(":Copilot disable")
