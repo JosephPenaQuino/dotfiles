@@ -175,7 +175,7 @@ return {
     -- d for gitemoji
     {'olacin/telescope-gitmoji.nvim'},
 
-    { 'jose-elias-alvarez/null-ls.nvim' },
+    { 'nvimtools/none-ls.nvim' },
 
     -- flutter
     {
