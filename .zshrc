@@ -278,3 +278,6 @@ alias ghc="gh copilot suggest"
 # Obsidian
 alias obsidian="${HOME}/programs/obsidian/obsidian --no-sandbox"
 alias cdn="cd $(mktemp -d)"
+
+# Set vi mode in ipython
+alias ipython="ipython --TerminalInteractiveShell.editing_mode=vi"
