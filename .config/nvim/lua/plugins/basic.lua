@@ -128,9 +128,6 @@ return {
 	}
     },
     {"folke/zen-mode.nvim"},
-    -- copilot
-    {'github/copilot.vim'},
-    {'CopilotC-Nvim/CopilotChat.nvim'},
 
     {'christoomey/vim-system-copy'},
     {'vim-scripts/argtextobj.vim'},
