@@ -5,7 +5,7 @@ null_ls.setup({
 		null_ls.builtins.diagnostics.mypy.with({
 			extra_args = { '--python-executable', 'python' },
 		}),
-		null_ls.builtins.diagnostics.ruff,
-		null_ls.builtins.formatting.eslint_d,
+		-- null_ls.builtins.diagnostics.ruff,
+		-- null_ls.builtins.formatting.eslint_d,
 	}
 })
