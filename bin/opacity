@@ -1,5 +1,5 @@
 #!/usr/bin/sh
 
 test -z "$1" && exit 1
-yml="$HOME/.config/alacritty/alacritty.yml"
-sed -i 's/opacity.*/opacity: .'$1'/g' $yml
+yml="$HOME/.config/alacritty/alacritty.toml"
+sed -i 's/opacity.*/opacity = 0.'$1'/g' $yml
