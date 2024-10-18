@@ -8,7 +8,7 @@ vim.keymap.set('n', '<leader>tg', function()
 end)
 vim.keymap.set('n', '<leader>tB', builtin.buffers, {})
 
--- vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>tl', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>tH', builtin.help_tags, {})
 
 
